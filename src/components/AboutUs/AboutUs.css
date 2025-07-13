@@ -1,0 +1,244 @@
+.about-hero {
+    height: 70vh;
+    background: linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,0.7)), url('../../assets/hero.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+  
+  .hero-content {
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+    animation: bounce 2s ease infinite;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    font-family: 'Comic Sans MS', 'Patrick Hand', cursive;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  /* principal section */
+  .principal-section {
+    background-color: #fdf9f6;
+    padding: 60px 20px;
+  }
+  .principal-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .principal-img {
+    width: 300px;
+    border-radius: 5%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .principal-message {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    animation: fadeInUp 1s ease-in;
+  }
+  .principal-message h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #b61d28;
+  }
+.values-section {
+    padding: 60px 20px;
+    background: #fff3e6;
+    text-align: center;
+}
+.values-section h2 {
+    font-size: 32px;
+    color: #b61d28;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease;
+}
+.value-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.value-card {
+    background: #fff;
+    border: 2px solid #ffd9b3;
+    padding: 2rem;
+    width: 260px;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease;
+}
+.value-card:hover {
+    transform: translateY(-8px);
+}
+.value-card img {
+    width: 60px;
+    margin-bottom: 1rem;
+}
+.team-section {
+    padding: 60px 20px;
+    background-color: #fdf9f6;
+    text-align: center;
+}
+.team-section h2 {
+    font-size: 32px;
+    color: #b61d28;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease;
+}
+.team-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    gap: 30px;
+    animation: fadeInUp 1s ease;
+}
+.teacher-img {
+    width: 200px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    /* z-index: 1;
+    position: relative; */
+}
+.teacher-info {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #5c3d00;
+}
+.teacher-info strong {
+    display: block;
+    font-size: 1.05rem;
+    color: #b61d28;
+    margin-bottom: 4px;
+}
+.speech-cloud {
+    background-color: #ffffff;
+    border: 2px solid #ffd9b3;
+    border-radius: 20px;
+    padding: 1.5rem;
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 780px;
+    color: #5c3d00;
+    animation: float 4s ease-in-out infinite;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.speech-cloud.left::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -22px;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    border-right-color: #ffffff;
+    z-index: 1;
+  }
+  .speech-bubble.left::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: -24px;
+    width: 0;
+    height: 0;
+    border: 14px solid transparent;
+    border-right-color: #ffd9b3;
+    z-index: 0;
+  }
+  .speech-cloud.right::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: -22px;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    border-left-color: #ffffff;
+    z-index: 1;
+  }
+  .speech-bubble.right::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    right: -24px;
+    width: 0;
+    height: 0;
+    border: 14px solid transparent;
+    border-left-color: #ffd9b3;
+    z-index: 0;
+  }
+
+@media (max-width: 768px) {
+    .principal-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .principal-message {
+        text-align: center;
+    }
+    .teacher-img {
+        margin-bottom: 1rem;
+    }
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  
+    .value-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .team-row {
+      flex-direction: column;
+    }
+  
+    .speech-cloud {
+      width: 90%;
+    }
+    .speech-cloud.left::after,
+    .speech-cloud.right::after {
+        display: none;
+    }
+}
+@keyframes float {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(-6px);}
+    100% { transform: translateY(0);}
+}
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
