@@ -1,30 +1,31 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import './Navbar.css'
 import logo from '../../assets/logo1.png'
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  
-  // const [sticky, setSticky] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  // useEffect(()=>{
-  //   window.addEventListener('scroll', ()=>{
-  //     window.scrollY > 70 ? setSticky(true) : setSticky(false);
-  //   })
-  // },[]);
-
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <nav className='container dark-nav'>
-    {/* <nav className={`container ${sticky? 'dark-nav' : ''}`}> */}
+    // <nav className='container dark-nav'>
+      <nav className='dark-nav'>
         <img src={logo} alt="" className='logo'/>
-        <ul className='nav-links'>
-            <Link to='/'><li>Home</li></Link>
-            <Link to='/about'><li>About Us</li></Link>
-            <Link to='/curriculum'><li>Our Curriculum</li></Link>
-            <Link to='/admissions'><li>Admissions</li></Link>
-
-            <li><button className='btn'>Contact Us</button></li>
-        </ul>
+        {/* Burger Icon */}
+        <div className="burger" onClick={handleToggle}>
+        <div className={`line1 ${isOpen ? 'toggle' : ''}`}></div>
+        <div className={`line2 ${isOpen ? 'toggle' : ''}`}></div>
+        <div className={`line3 ${isOpen ? 'toggle' : ''}`}></div>
+      </div>
+      <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
+        <Link to="/" onClick={() => setIsOpen(false)}><li>Home</li></Link>
+        <Link to="/about" onClick={() => setIsOpen(false)}><li>About Us</li></Link>
+        <Link to="/curriculum" onClick={() => setIsOpen(false)}><li>Our Curriculum</li></Link>
+        <Link to="/admissions" onClick={() => setIsOpen(false)}><li>Admissions</li></Link>
+        <li><button className="btn" onClick={() => setIsOpen(false)}>Contact Us</button></li>
+      </ul>
     </nav>
   )
 }

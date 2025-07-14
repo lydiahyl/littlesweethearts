@@ -6,7 +6,7 @@ import Home from '../Home/Home'
 import Footer from '../Footer/Footer'
 import ImageSlider from '../ImageSlider/ImageSlider'
 
-function hero() {
+function Hero() {
   return (
     <>
     <ImageSlider />
@@ -16,4 +16,4 @@ function hero() {
   )
 }
 
-export default hero
+export default Hero
