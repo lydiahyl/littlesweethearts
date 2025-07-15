@@ -117,7 +117,7 @@ function Curriculum() {
         </div>
       <div className='calendar-download'>
       <a
-        href="/calendar/LittleHearts_SchoolCalendar2025.pdf"
+        href="/LittleSweetheartsCalendar.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="download-button"
