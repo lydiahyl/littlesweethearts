@@ -1,0 +1,68 @@
+.admissions-hero {
+    height: 70vh;
+    background: linear-gradient(rgba(8,0,58,0.7), rgba(8,0,58,0.7)), url('../../assets/about1.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-content {
+    text-align: center;
+    z-index: 2;
+}
+.admissions-heading {
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+    animation: bounce 2s ease infinite;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+@keyframes bounce {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+}
+.admissions-page {
+    color: #1b2d48;
+}
+.admissions-content {
+    padding: 60px 20px;
+    background-color: #f6f1ea;
+}
+.admissions-section {
+    background-color: #f6f1ea;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.admissions-section:hover {
+    transform: translateY(-5px)
+}
+.admissions-section h2 {
+    color: #1b2d48;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+.admissions-section ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+.admissions-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+@media (max-width: 768px) {
+    .admissions-heading {
+        font-size: 2rem;
+    }
+    .admissions-section {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .admissions-section h2 {
+        font-size: 1.3rem;
+    }
+}

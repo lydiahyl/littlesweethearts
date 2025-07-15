@@ -1,91 +1,97 @@
-/* Container */
-.curriculum-container {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-}
-
 /* Hero Section */
 .hero-section {
-  position: relative;  
-  text-align: center;
-  background: url('../../assets/about1.png') no-repeat center/cover;
-  border-radius: 12px;
-  padding: 6rem 1rem 4rem;
-  background-color: #fef6f0;
-}
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(27, 45, 72, 0.6); /* dark overlay */
-  z-index: 1;
-}
-.hero-title,
-.hero-subtitle {
-  position: relative;
-  z-index: 2;
+  height: 70vh;
+  background: linear-gradient(rgba(8,0,58,0.7), rgba(8,0,58,0.7)), url('../../assets/about1.png') no-repeat center center/cover;
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hero-title {
+  text-align: center;
+  z-index: 2;
   font-size: 3rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-.hero-subtitle {
-  font-size: 1.2rem;
-  color: #eee;
-  max-width: 700px;
-  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 /* Section Titles */
 .section-title {
-  font-size: 2.2rem;
-  margin: 3rem 0 1rem;
-  color: #1b2d48;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
   text-align: center;
+  color: #333;
+  font-weight: 600;
 }
 
 .section-text {
-  font-size: 1.1rem;
   text-align: center;
-  max-width: 700px;
+  font-size: 1.1rem;
+  max-width: 800px;
   margin: 0 auto 2rem;
-  line-height: 1.7;
+  line-height: 1.6;
 }
-
+.why-stand-out-section {
+  padding: 3rem 1.5rem;
+  background-color: #fffdf7;
+}
+.curriculum-highlights {
+  background-color: #f9f9f9;
+  padding: 3rem 1.5rem;
+}
+.highlight-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.highlight-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.highlight-icon {
+  font-size: 2.5rem;
+  color: #E27802;
+  margin-bottom: 1rem;
+}
+.highlight-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+.highlight-card p {
+  font-size: 1rem;
+  color: #555;
+}
 /* Teaching Table Section */
 .teaching-table-section {
-  margin-top: 3rem;
-  padding: 2rem;
+  padding: 3rem 1.5rem;
   background-color: #f6f1ea;
-  border-radius: 16px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
 }
 
 .teaching-table {
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   border-collapse: collapse;
-  margin-top: 1.5rem;
   font-size: 1rem;
 }
 
 .teaching-table th,
 .teaching-table td {
-  padding: 14px 18px;
+  padding: 1rem;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
 }
 
 .teaching-table th {
-  background-color: #1b2d48;
-  color: #fff;
+  background-color: #f0f0f0;
+  font-weight: bold;
 }
 
 .teaching-table tr:nth-child(even) {
@@ -95,161 +101,117 @@
 .teaching-table tr:hover {
   background-color: #f1f1f1;
 }
-
-/* Accordion Section */
-.term-table-section {
-  margin-top: 3rem;
-  padding: 2rem;
-  background-color: #fffefb;
-  border-radius: 16px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
-}
-
-.accordion__button {
-  background-color: #1b2d48;
-  color: white;
-  font-size: 1rem;
-  padding: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: left;
-  width: 100%;
-  transition: background-color 0.3s ease;
-}
-
-.accordion__button:hover {
-  background-color: #334e6d;
-}
-
-.accordion__panel {
-  padding: 1rem;
-  background-color: #fafafa;
-  border-top: 1px solid #ccc;
-  border-radius: 0 0 12px 12px;
-}
+/* === Calendar Section === */
 .calendar-box-section {
+  padding: 3rem 1.5rem;
+  background-color: #fdfaf4;
   text-align: center;
-  margin-top: 4rem;
 }
-
 .term-box-container {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
   flex-wrap: wrap;
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
 .term-box {
-  flex: 1;
-  min-width: 220px;
-  max-width: 300px;
-  background-color: #fef6f0;
-  border: 2px solid #1b2d48;
-  color: #1b2d48;
-  border-radius: 16px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.term-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-width: 180px;
 }
 
 .term-box h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.term-box p {
-  font-size: 1rem;
-  color: #333;
-}
-
-.calendar-download {
-  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #E27802;
+  margin-bottom: 0.3rem;
 }
 
 .download-button {
-  padding: 0.75rem 1.5rem;
-  background-color: #1b2d48;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: #E27802;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
   text-decoration: none;
-  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 .download-button:hover {
-  background-color: #334e6d;
+  background-color: #d06900;
 }
+
+/* School Terms Section */
+.term-table-section,
+.daily-schedule-section {
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 900px;
+  background-color: #fdfdfd;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.term-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  color: #444;
+}
+
+/* Daily Schedule Table */
 .schedule-table-container {
-  margin-top: 1.5rem;
   overflow-x: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-top: 1rem;
 }
+
 .schedule-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 1rem;
-  background-color: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
+  min-width: 400px;
 }
-.schedule-table th, 
+
+.schedule-table th,
 .schedule-table td {
+  padding: 1rem;
   border: 1px solid #ddd;
-  padding: 14px 18px;
-  text-align: center;
+  text-align: left;
 }
+
 .schedule-table th {
-  background-color: #1b2d48;
-  color: #fff;
+  background-color: #eaf6ff;
   font-weight: 600;
 }
-.schedule-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-.schedule-table tr:hover {
-  background-color: #f1f5f9;
-}
-/* Responsive */
+
+/* === Responsive === */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .hero-subtitle {
     font-size: 1rem;
   }
-  .section-title {
-    font-size: 1.6rem;
+
+  .highlight-cards {
+    grid-template-columns: 1fr;
   }
-  .teaching-table th,
-  .teaching-table td {
-    font-size: 0.95rem;
-    padding: 10px 12px;
-  }
+
   .term-box {
     flex: 1 1 100%;
-    max-width: 100%;
-  }
-  .term-box-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .schedule-table {
-    font-size: 0.9rem;
+    margin: 1rem 0;
   }
   .schedule-table th,
   .schedule-table td {
-    padding: 10px 12px;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .term-description {
+    font-size: 1rem;
   }
 }
