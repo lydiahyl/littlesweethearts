@@ -1,15 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion"
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from "react-accessible-accordion";
 import './Curriculum.css'
 import Footer from '../Footer/Footer';
-import bgimage from '../../assets/about1.png'
 import { FaLeaf, FaHeart, FaPuzzlePiece, FaBook } from 'react-icons/fa'
 
 function Curriculum() {
@@ -119,8 +111,8 @@ function Curriculum() {
         >
         <h2 className='section-title'>School Calendar</h2>
         <div className='term-box-container'>
-        <motion.div className='term-box' whileHover={{ scale: 1.05 }}><h3>Term 1</h3><p>Jan - Mar</p></motion.div>
-          <motion.div className='term-box' whileHover={{ scale: 1.05 }}><h3>Term 2</h3><p>Apr - Jun</p></motion.div>
+        <motion.div className='term-box' whileHover={{ scale: 1.05 }}><h3>Term 1</h3><p>January - May</p></motion.div>
+          <motion.div className='term-box' whileHover={{ scale: 1.05 }}><h3>Term 2</h3><p>June - December</p></motion.div>
           {/* <motion.div className='term-box' whileHover={{ scale: 1.05 }}><h3>Term 3</h3><p>Jul - Sep</p></motion.div> */}
         </div>
       <div className='calendar-download'>

@@ -8,8 +8,8 @@ import 'swiper/css/pagination'
 import './ImageSlider.css'
 
 import image1 from '../../assets/image1.png'
-import image2 from '../../assets/program-2.jpg'
-import image3 from '../../assets/program-3.jpg'
+import image2 from '../../assets/image2.png'
+import image3 from '../../assets/image3.png'
 
 SwiperCore.use([Autoplay, Pagination])
 

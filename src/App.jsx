@@ -6,6 +6,8 @@ import Curriculum from './components/Curriculum/Curriculum'
 import Admissions from './components/Admissions/Admissions'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Whatsapp from './components/Whatsapp/Whatsapp'
+import Contact from './components/Contact/Contact'
+import ScrollToTop from './Scroll'
 
 const App = () => {
   return (
@@ -13,12 +15,13 @@ const App = () => {
   <Router>
     <Navbar/>
     <Whatsapp/>
+    <ScrollToTop />
       <Routes>
         <Route path='/' element={<Hero/>} />
         <Route path='/about' element={<AboutUs/>} />
         <Route path='/curriculum' element={<Curriculum/>} />
         <Route path='/admissions' element={<Admissions/>} />
-
+        <Route path='/contactus' element={<Contact/>} />
       </Routes>
     </Router>
 

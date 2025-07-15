@@ -1,7 +1,7 @@
 /* Hero Section */
 .hero-section {
-  height: 70vh;
-  background: linear-gradient(rgba(8,0,58,0.7), rgba(8,0,58,0.7)), url('../../assets/about1.png') no-repeat center center/cover;
+  height: 85vh;
+  background: linear-gradient(rgba(8,0,58,0.7), rgba(8,0,58,0.7)), url('../../assets/curriculum.png') no-repeat center center/cover;
   font-family: "Outfit", sans-serif;
   display: flex;
   justify-content: center;
@@ -56,7 +56,7 @@
 }
 .highlight-icon {
   font-size: 2.5rem;
-  color: #E27802;
+  color: 	#722F37;
   margin-bottom: 1rem;
 }
 .highlight-card h3 {
@@ -117,22 +117,22 @@
 
 .term-box {
   background-color: #fff;
-  padding: 1rem 2rem;
+  padding: 3rem 3rem;
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  min-width: 180px;
+  min-width: 280px;
 }
 
 .term-box h3 {
-  font-size: 1.2rem;
-  color: #E27802;
+  font-size: 2rem;
+  color: 	#722F37;
   margin-bottom: 0.3rem;
 }
 
 .download-button {
   display: inline-block;
   margin-top: 2rem;
-  background-color: #E27802;
+  background-color: 	#722F37;
   color: white;
   padding: 0.7rem 1.5rem;
   border-radius: 0.5rem;
@@ -141,7 +141,7 @@
 }
 
 .download-button:hover {
-  background-color: #d06900;
+  background-color: 	#722F37;
 }
 
 /* School Terms Section */

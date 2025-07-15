@@ -11,7 +11,7 @@ function Whatsapp() {
       <div className="whatsapp-float">
       <a href={link} target="_blank" rel="noopener noreferrer">
         <img
-          src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
+          src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png"
           alt="WhatsApp"
           className="whatsapp-icon"
         />

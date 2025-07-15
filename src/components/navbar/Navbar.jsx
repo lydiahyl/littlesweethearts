@@ -24,7 +24,7 @@ const Navbar = () => {
         <Link to="/about" onClick={() => setIsOpen(false)}><li>About Us</li></Link>
         <Link to="/curriculum" onClick={() => setIsOpen(false)}><li>Our Curriculum</li></Link>
         <Link to="/admissions" onClick={() => setIsOpen(false)}><li>Admissions</li></Link>
-        <li><button className="btn" onClick={() => setIsOpen(false)}>Contact Us</button></li>
+        <Link to="/contactus" onClick={() => setIsOpen(false)}><li><button className="btn">Contact Us</button></li></Link>
       </ul>
     </nav>
   )

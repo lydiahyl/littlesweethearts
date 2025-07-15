@@ -1,6 +1,6 @@
 .about-hero {
-    height: 70vh;
-    background: linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,0.7)), url('../../assets/hero.png') no-repeat center center/cover;
+    height: 85vh;
+    background: linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,0.7)), url('../../assets/aboutus.png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;  

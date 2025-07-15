@@ -1,7 +1,6 @@
 import React from 'react'
 import './Admissions.css'
 import { motion } from 'framer-motion'
-import curriculumImg from '../../assets/about1.png'
 
 function Admissions() {
   return (

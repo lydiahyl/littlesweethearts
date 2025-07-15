@@ -108,7 +108,7 @@ function Home() {
         <button className='btn dark-btn'>See More<img src={white_arrow} alt="" /></button>
         </div>
       </div>
-    <div className='contact-section'>
+    {/* <div className='contact-section'>
     <div className='contact-wrapper'>
     <Title subTitle='CONTACT US' />
     <div className='contact'>
@@ -138,7 +138,7 @@ function Home() {
         </div>
       </div>
    </div>
-  </div>
+  </div> */}
 </div>
     
   )
