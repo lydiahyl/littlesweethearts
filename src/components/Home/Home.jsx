@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Home.css'
 import about_img from '../../assets/about.png'
 import play_icon from '../../assets/play-icon.png'
@@ -13,12 +13,14 @@ import facility_2 from '../../assets/facility-2.jpeg'
 import facility_3 from '../../assets/facility-3.jpeg'
 import facility_4 from '../../assets/facility-4.jpeg'
 import facility_5 from '../../assets/facility-5.jpeg'
-import msg_icon from '../../assets/msg-icon.png'
-import mail_icon from '../../assets/mail-icon.png'
-import phone_icon from '../../assets/phone-icon.png'
-import location_icon from '../../assets/location-icon.png'
+// import msg_icon from '../../assets/msg-icon.png'
+// import mail_icon from '../../assets/mail-icon.png'
+// import phone_icon from '../../assets/phone-icon.png'
+// import location_icon from '../../assets/location-icon.png'
 import white_arrow from '../../assets/white-arrow.png'
 import Title from '../Title/Title'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Home() {
   const [result, setResult] = React.useState("");
@@ -45,15 +47,21 @@ function Home() {
       setResult(data.message);
     }
   };
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true      
+    });
+  }, []);
   return (
     <div>
-    <section className="about-section">
+    <section className="about-section" data-aos="fade-up">
       <div className="about">
-        <div className="about-left">
+        <div className="about-left" data-aos="fade-right">
           <img src={about_img} alt="about" className="about-img" />
           <img src={play_icon} alt="play" className="play-icon" />
         </div>
-        <div className="about-right">
+        <div className="about-right" data-aos="fade-left">
           <h3>ABOUT PRESCHOOL</h3>
           <h2>Where every little step brings sweet smiles and big hearts </h2>
           <p>
@@ -67,25 +75,25 @@ function Home() {
         </div>
       </div>
     </section>
-        <div className="programs-section">
+        <div className="programs-section" data-aos="fade-up">
      <Title subTitle='NEWSLETTERS'/>
 
     <div className="programs">
-        <div className="program">
+        <div className="program" data-aos="zoom-in">
             <img src={program_1} alt="" />
             <div className="caption">
                 <img src={program_icon_1} alt="" />
                 <p>Sports' Day</p>
             </div>
         </div> 
-        <div className="program">
+        <div className="program" data-aos="zoom-in" data-aos-delay="100">
         <img src={program_2} alt="" />
         <div className="caption">
                 <img src={program_icon_2} alt="" />
                 <p>Children's Day</p>
             </div>
         </div>
-        <div className="program">
+        <div className="program" data-aos="zoom-in" data-aos-delay="200">
         <img src={program_3} alt="" />
         <div className="caption">
                 <img src={program_icon_3} alt="" />
@@ -94,11 +102,11 @@ function Home() {
         </div>
     </div>
   </div>
-  <div className='facilities-section'>
+  <div className='facilities-section' data-aos="fade-up">
   <div className='facilities'>
   <Title subTitle='SCHOOL FACILITIES'/>
 
-        <div className='facility'>
+        <div className='facility' data-aos="fade-right">
             <img src={facility_1} alt="" />
             <img src={facility_2} alt="" />
             <img src={facility_3} alt="" />
@@ -108,37 +116,6 @@ function Home() {
         <button className='btn dark-btn'>See More<img src={white_arrow} alt="" /></button>
         </div>
       </div>
-    {/* <div className='contact-section'>
-    <div className='contact-wrapper'>
-    <Title subTitle='CONTACT US' />
-    <div className='contact'>
-        <div className="contact-col">
-            <h3>Send us a message<img src={msg_icon} alt="" /></h3>
-            <p>Feel free to reach out through contact form or find our contact
-            information below. Your feedback, questions, and suggestions are 
-            important to us as we strive to provide exceptional service to our 
-            university community.</p>
-            <ul>
-                <li><img src={mail_icon} alt=""/>Contact@enquiry.edu.my</li>
-                <li><img src={phone_icon} alt=""/>+6012 8727129</li>
-                <li><img src={location_icon} alt=""/>K7, Jalan Sweethearts<br/>57100, KL</li>
-            </ul>
-        </div>
-        <div className="contact-col">
-        <form onSubmit={onSubmit}>
-            <label>Your Name</label>
-            <input type="text" name="name" placeholder='Enter your name' required/>
-            <label>Phone Number</label>
-            <input type='tel' name='phone' placeholder='Enter your number' required/>
-            <label>Write your enquiry here</label>
-            <textarea name="message" rows="6" placeholder='Enter your message' required></textarea>
-            <button type='submit' className='btn dark-btn'>Submit now<img src={white_arrow} alt=""/></button>
-        </form>
-        <span>{result}</span>
-        </div>
-      </div>
-   </div>
-  </div> */}
 </div>
     
   )

@@ -1,6 +1,7 @@
 import React from 'react'
 import './Admissions.css'
 import { motion } from 'framer-motion'
+import Footer from '../Footer/Footer'
 
 function Admissions() {
   return (
@@ -43,6 +44,7 @@ function Admissions() {
           </p>
         </section>
     </div>
+    <Footer/>
   </div>
   )
 }

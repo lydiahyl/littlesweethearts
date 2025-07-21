@@ -18,11 +18,9 @@
 .about-left {
     flex-basis: 40%;
     position: relative;
-    animation: fadeInLeft 1s ease;
 }
 .about-right {
     flex-basis: 56%;
-    animation: fadeInRight 1s ease;
 }
 .about-img {
     width: 100%;
@@ -56,7 +54,6 @@
   padding: 60px 0;
   width: 100%;
   overflow-x: hidden;
-  animation: fadeInRight 1s ease;
 }
 .programs {
   max-width: 1100px;
@@ -121,14 +118,13 @@
   transition: transform 0.3s ease;
 }
 .program:hover .caption img {
-  transform: rotate(5deg) scale(1.1);
+  transform: scale(1.1);
 }
 .facilities {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
-  animation: fadeInRight 1s ease;
 }
 .facilities-section {
   background-color: #fdf9f6;

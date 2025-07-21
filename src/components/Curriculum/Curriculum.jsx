@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer';
 import { FaLeaf, FaHeart, FaPuzzlePiece, FaBook } from 'react-icons/fa'
 
 function Curriculum() {
+
   return (
     <div className='curriculum-container'>
         <motion.section
@@ -126,20 +127,7 @@ function Curriculum() {
         </a>
       </div>
       </motion.section>
-      {/* School Terms */}
-      {/* <motion.section
-       className="term-table-section"
-       initial={{ opacity: 0 }}
-       animate={{ opacity: 1 }}
-       transition={{ duration: 1, delay: 0.8 }}
-      >
-       <h2 className='section-title'>School Terms</h2>
-       <p className="term-description">
-        Each school term spans approximately 10 weeks, with a 2-week break in between.
-        We also observe public holidays and special cultural events.
-      </p>
-     </motion.section> */}
-
+      
     {/* Daily Schedule */}
      <motion.section
       className="daily-schedule-section"
