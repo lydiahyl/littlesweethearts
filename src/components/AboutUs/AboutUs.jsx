@@ -38,8 +38,8 @@ const AboutUs = () => {
     <img src={principal} alt="" className='principal-img'/>
     <div className="teacher-info">
           <strong>Eunice Ho</strong> 
-          Founder<br/>
-          Bacherlor of Education (Hons.)        
+          Founder/Principal<br/>
+          Bachelor of Education (Hons.)        
           </div>
       </div>
     <div className='principal-message' data-aos="fade-left">

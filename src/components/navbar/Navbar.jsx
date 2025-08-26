@@ -1,7 +1,11 @@
 import React, {useState } from 'react'
 import './Navbar.css'
-import logo from '../../assets/logo1.png'
+import logo from '../../assets/logo4.png'
+import facebookIcon from '../../assets/facebook-logo.png'
+import fbLogo from '../../assets/fb-blue.png'
+import instagramIcon from '../../assets/instagram-logo.webp'
 import { Link } from 'react-router-dom';
+// import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,10 +24,21 @@ const Navbar = () => {
         <div className={`line3 ${isOpen ? 'toggle' : ''}`}></div>
       </div>
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <Link to="/" onClick={() => setIsOpen(false)}><li>Home</li></Link>
-        <Link to="/about" onClick={() => setIsOpen(false)}><li>About Us</li></Link>
-        <Link to="/curriculum" onClick={() => setIsOpen(false)}><li>Our Curriculum</li></Link>
-        <Link to="/admissions" onClick={() => setIsOpen(false)}><li>Admissions</li></Link>
+        <Link to="/" onClick={() => setIsOpen(false)}><li>HOME</li></Link>
+        <Link to="/about" onClick={() => setIsOpen(false)}><li>ABOUT US</li></Link>
+        <Link to="/curriculum" onClick={() => setIsOpen(false)}><li>OUR CURRICULUM</li></Link>
+        <Link to="/admissions" onClick={() => setIsOpen(false)}><li>ADMISSIONS</li></Link>
+
+         {/* Social Icons */}
+         <li className="nav-social">
+          <a href="https://facebook.com/yourpage" target="_blank">
+            <img src={fbLogo} alt="Facebook" className="social-img" />
+          </a>
+          <a href="https://www.instagram.com/kinderhearts.official?igsh=MTR5Mm8yYXZyYXl5aQ==" target="_blank">
+            <img src={instagramIcon} alt="Instagram" className="social-img" />
+          </a>
+        </li>
+
         <Link to="/contactus" onClick={() => setIsOpen(false)}><li><button className="btn">Contact Us</button></li></Link>
       </ul>
     </nav>

@@ -11,14 +11,11 @@ nav {
     justify-content: space-between;
     z-index: 10;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    height: 85px;
+    height: 100px;
 }
-/* .container{
-  padding-left: 10%;
-  padding-right: 10%;
-} */
 .logo{
-    width: 200px;
+    width: 240px;
+    height: 240px;
     margin: 0;
     /* margin-left: -80px; */
 
@@ -75,6 +72,51 @@ nav ul li:hover {
 .burger.toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+.nav-social {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 12px;
+}
+  .nav-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; /* adjust for circle size */
+    height: 44px;
+    border-radius: 50%;
+    /* background-color: #fff;  */
+    line-height: 0;
+    padding: 0; /* this keeps border thin */
+    box-sizing: content-box;
+    transition: transform 0.3s ease;
+  }
+  .nav-social a:hover { transform: scale(1.06); }
+  .nav-social a img {
+    width: 56px;  /* actual icon size — increase this */
+    height: 56px;
+    display: block;
+    object-fit: contain;
+  }
+  .social-img {
+    width: 55px;  /* actual icon size — increase this */
+    height: 55px;
+    border-radius: 40%;
+    object-fit: cover;
+  }
+  .social-icon {
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .nav-social a:hover {
+    background-color: #f6f1ea;
+  }
+  
+  .nav-social a:hover .social-icon {
+    color: #1b2d48;
+  }
+
 @media (max-width: 768px) {
     nav {
       flex-direction: row;

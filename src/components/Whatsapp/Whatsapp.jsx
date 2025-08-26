@@ -3,7 +3,7 @@ import './Whatsapp.css'
 
 function Whatsapp() {
 
-    const phoneNum = "601112058108";
+    const phoneNum = "60147887857";
     const msg = "Hi! I am interested in booking a tour at your preschool.";
     const link = `https://wa.me/${phoneNum}?text=${encodeURIComponent(msg)}`;
   return (

@@ -59,13 +59,13 @@ function Home() {
       <div className="about">
         <div className="about-left" data-aos="fade-right">
           <img src={about_img} alt="about" className="about-img" />
-          <img src={play_icon} alt="play" className="play-icon" />
+          {/* <img src={play_icon} alt="play" className="play-icon" /> */}
         </div>
         <div className="about-right" data-aos="fade-left">
           <h3>ABOUT PRESCHOOL</h3>
           <h2>Where every little step brings sweet smiles and big hearts </h2>
           <p>
-          At Little Sweethearts, hearts come first. 
+          At Kinderhearts, hearts come first. 
           WE believe the heart of education - is the education of the heart. 
           Everything we do, we do with love – and with all our hearts. 
           So be kind, be nice, be sweet. 

@@ -16,7 +16,7 @@ SwiperCore.use([Autoplay, Pagination])
 const slides = [
   {
     image: image1,
-    title: "Welcome to Little Sweethearts",
+    title: "Welcome to Kinderhearts",
     subtitle: "Preschool & Kindergarten"
   },
   {
