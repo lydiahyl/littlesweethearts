@@ -1,6 +1,6 @@
 import React, {useState } from 'react'
 import './Navbar.css'
-import logo from '../../assets/logo4.png'
+import logo from '../../assets/logo6.png'
 import facebookIcon from '../../assets/facebook-logo.png'
 import fbLogo from '../../assets/fb-blue.png'
 import instagramIcon from '../../assets/instagram-logo.webp'
@@ -25,12 +25,15 @@ const Navbar = () => {
       </div>
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
         <Link to="/" onClick={() => setIsOpen(false)}><li>HOME</li></Link>
-        <Link to="/about" onClick={() => setIsOpen(false)}><li>ABOUT US</li></Link>
-        <Link to="/curriculum" onClick={() => setIsOpen(false)}><li>OUR CURRICULUM</li></Link>
+        <Link to="/about" onClick={() => setIsOpen(false)}><li>ABOUT KINDERHEARTS</li></Link>
+        <Link to="/curriculum" onClick={() => setIsOpen(false)}><li>LEARNING JOURNEY</li></Link>
         <Link to="/admissions" onClick={() => setIsOpen(false)}><li>ADMISSIONS</li></Link>
+        <Link to="/contactus" onClick={() => setIsOpen(false)}><li><button className="btn">BOOK A KINDERTOUR</button></li></Link>
 
          {/* Social Icons */}
          <li className="nav-social">
+         {/* <Link to="/contactus" onClick={() => setIsOpen(false)}><li><button className="btn">BOOK A KINDERTOUR</button></li></Link> */}
+
           <a href="https://facebook.com/yourpage" target="_blank">
             <img src={fbLogo} alt="Facebook" className="social-img" />
           </a>
@@ -39,7 +42,6 @@ const Navbar = () => {
           </a>
         </li>
 
-        <Link to="/contactus" onClick={() => setIsOpen(false)}><li><button className="btn">Contact Us</button></li></Link>
       </ul>
     </nav>
   )

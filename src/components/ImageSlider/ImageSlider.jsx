@@ -7,27 +7,27 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import './ImageSlider.css'
 
-import image1 from '../../assets/image1.png'
-import image2 from '../../assets/image2.png'
-import image3 from '../../assets/image3.png'
+import image1 from '../../assets/first.png'
+import image2 from '../../assets/second.png'
+import image3 from '../../assets/third.png'
 
 SwiperCore.use([Autoplay, Pagination])
 
 const slides = [
   {
     image: image1,
-    title: "Welcome to Kinderhearts",
-    subtitle: "Preschool & Kindergarten"
+    title: "Welcome to KinderHearts Preschool ",
+    subtitle: "The Heart of Education is the Education of the Heart"
   },
   {
     image: image2,
-    title: "Play. Learn. Grow.",
-    subtitle: "A Joyful Start to Early Education"
+    title: "Growing Curious Minds and Kind Hearts ",
+    subtitle: "Where curiosity leads to discovery and every heart feels at home"
   },
   {
     image: image3,
-    title: "Every Child is a Star",
-    subtitle: "Shining Bright in Their Own Way"
+    title: "Nurture · Grow · Explore ",
+    subtitle: "With All Our Hearts"
   }
 ]
 

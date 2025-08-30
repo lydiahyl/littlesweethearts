@@ -36,15 +36,16 @@ function ContactUs() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="hero-title">Contact Us</h1>
+        <h1 className="hero-title">Book a Kinderhearts School Tour</h1>
       </motion.section>
 
       <section className="contact-content">
         <div className="contact-info">
-          <h2>We’d love to hear from you!</h2>
+          <h2>Got questions? We're here for you.</h2>
+          <p>Hours: 8:30 AM - 6:00 PM</p>
           <p>Email: <a href="mailto:hello@kinderhearts.my">hello@kinderhearts.my</a></p>
-          <p>Phone: <a href="tel:+60123456789">+60 14-7887857</a></p>
-          <p>Location: 22, Jalan Sri Petaling 5, Bandar Baru Sri Petaling, 57000 Kuala Lumpur.</p>
+          <p>Call/WhatsApp <a href="whatsapp">+60 14-7887857</a></p>
+          <p>Address: 22, Jalan Sri Petaling 5, Bandar Baru Sri Petaling, 57000 Kuala Lumpur.</p>
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0775678387454!2d101.69208231010987!3d3.0739554535982556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4a62b83e7d2f%3A0x5da22291892cc5de!2s22%2C%20Jalan%20Sri%20Petaling%205%2C%20Bandar%20Baru%20Sri%20Petaling%2C%2057000%20Kuala%20Lumpur%2C%20Wilayah%20Persekutuan%20Kuala%20Lumpur!5e0!3m2!1sen!2smy!4v1752566238151!5m2!1sen!2smy"
             width="100%" 

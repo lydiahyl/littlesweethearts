@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import './Home.css'
 import about_img from '../../assets/about.png'
 import play_icon from '../../assets/play-icon.png'
-import program_1 from '../../assets/program-1.jpg'
-import program_2 from '../../assets/program-2.jpg'
-import program_3 from '../../assets/program-3.jpg'
-import program_icon_1 from '../../assets/program-icon-1.png'
-import program_icon_2 from '../../assets/program-icon-2.png'
-import program_icon_3 from '../../assets/program-icon-3.png'
+import program_1 from '../../assets/children3.png'
+import program_2 from '../../assets/christmas2.png'
+import program_3 from '../../assets/holiday.png'
+import program_icon_1 from '../../assets/childrenicon2.png'
+import program_icon_2 from '../../assets/christmasicon2.png'
+import program_icon_3 from '../../assets/holidayicon.png'
 import facility_1 from '../../assets/facility-1.jpeg'
 import facility_2 from '../../assets/facility-2.jpeg'
 import facility_3 from '../../assets/facility-3.jpeg'
@@ -62,49 +62,59 @@ function Home() {
           {/* <img src={play_icon} alt="play" className="play-icon" /> */}
         </div>
         <div className="about-right" data-aos="fade-left">
-          <h3>ABOUT PRESCHOOL</h3>
-          <h2>Where every little step brings sweet smiles and big hearts </h2>
+          <h3>ABOUT KINDERHEARTS</h3>
+          <h2>Where Every Little Step Sparks Wonder</h2>
           <p>
-          At Kinderhearts, hearts come first. 
-          WE believe the heart of education - is the education of the heart. 
-          Everything we do, we do with love – and with all our hearts. 
-          So be kind, be nice, be sweet. 
-          After all, our children aren’t just learners… they’re our precious, 
-          our darlings… our little sweethearts.
+          At KinderHearts, hearts come first. 
+          We believe that the true heart of education lies in the education of the heart, 
+          helping children grow into confident, compassionate, and lifelong learners.
+
+          Everything we do — from the way we teach and lead to the way we care and connect — 
+          is done with love, patience, and purpose. We create a safe, joyful, and inspiring environment 
+          where every child feels valued, empowered, and truly seen.
+
+          At KinderHearts, children aren’t just learners. 
+          They are our sweethearts, little explorers, and bright stars, each shining 
+          in their own special way. We nurture their curiosity, guide their growth, and celebrate 
+          their learning every step of the way.
+
+          And because every child’s learning journey is unique, 
+          we partner closely with parents to ensure every child feels 
+          supported, inspired, and ready to take on the world.
           </p>
         </div>
       </div>
     </section>
         <div className="programs-section" data-aos="fade-up">
-     <Title subTitle='NEWSLETTERS'/>
+     <Title subTitle='KinderNews'/>
 
     <div className="programs">
         <div className="program" data-aos="zoom-in">
             <img src={program_1} alt="" />
             <div className="caption">
                 <img src={program_icon_1} alt="" />
-                <p>Sports' Day</p>
+                <p>Children's Day</p>
             </div>
         </div> 
         <div className="program" data-aos="zoom-in" data-aos-delay="100">
         <img src={program_2} alt="" />
         <div className="caption">
                 <img src={program_icon_2} alt="" />
-                <p>Children's Day</p>
+                <p>Christmas Party</p>
             </div>
         </div>
         <div className="program" data-aos="zoom-in" data-aos-delay="200">
         <img src={program_3} alt="" />
         <div className="caption">
                 <img src={program_icon_3} alt="" />
-                <p>Music Competition</p>
+                <p>Holiday Programme</p>
             </div>
         </div>
     </div>
   </div>
   <div className='facilities-section' data-aos="fade-up">
   <div className='facilities'>
-  <Title subTitle='SCHOOL FACILITIES'/>
+  <Title subTitle='KinderSpaces'/>
 
         <div className='facility' data-aos="fade-right">
             <img src={facility_1} alt="" />
@@ -113,7 +123,7 @@ function Home() {
             <img src={facility_4} alt="" />
             {/* <img src={facility_5} alt="" /> */}
         </div>
-        <button className='btn dark-btn'>See More<img src={white_arrow} alt="" /></button>
+        {/* <button className='btn dark-btn'>See More<img src={white_arrow} alt="" /></button> */}
         </div>
       </div>
 </div>
