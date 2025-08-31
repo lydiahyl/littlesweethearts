@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Home.css'
 import about_img from '../../assets/about.png'
 import play_icon from '../../assets/play-icon.png'
+import { Link } from 'react-router'
 import program_1 from '../../assets/children3.png'
 import program_2 from '../../assets/christmas2.png'
 import program_3 from '../../assets/holiday.png'
@@ -82,6 +83,12 @@ function Home() {
           we partner closely with parents to ensure every child feels 
           supported, inspired, and ready to take on the world.
           </p>
+            {/* Learn More Button */}
+            <div className="about-btn-wrapper">
+              <Link to="/about" className="learn-more-btn">
+                Learn More <span className="arrow">→</span>
+            </Link>
+            </div>
         </div>
       </div>
     </section>

@@ -1,157 +1,127 @@
+/* --- NAV BAR — shorter height --- */
 nav {
     width: 100%;
-    background: #1b2d48;    
+    background: #1b2d48;
     color: #f6f1ea;
-    padding: 6px 20px; 
-    position: fixed; 
-    top: 0;
-    left: 0;
+    padding: 0 20px;           /* remove vertical padding */
+    position: fixed;
+    top: 0; left: 0;
     display: flex;
-    align-items: center;
+    align-items: center;        /* vertically center items */
     justify-content: space-between;
     z-index: 10;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    height: 85px;
-}
-.logo{
-    width: 240px;
-    height: 240px;
+    height: 75px;               /* was 85px */
+  }
+  
+  /* --- LOGO — scale to nav height --- */
+  .logo{
+    height: 200px;               /* was 240x240 */
+    width: 200px;
     margin: 0;
-    /* margin-left: -80px; */
-
-}
-nav ul {
+  }
+  
+  /* --- NAV LINKS ROW --- */
+  nav ul {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 24px;                  /* consistent spacing between items */
     margin: 0;
     padding: 0;
-}
-nav ul li{
-    /* display: inline-block; */
+  }
+  
+  nav ul li{
     list-style: none;
-    /* margin: 0px 14px; */
-    font-size: 16px;
+    font-size: 15px;
     color: #f6f1ea;
     cursor: pointer;
-    /* position: relative; */
     transition: color 0.3s ease, transform 0.3s ease;
-}
-nav ul li:hover {
-    color: #f6f1ea; 
-}
-.btn {
+  }
+  
+  /* --- BUTTON — slightly smaller to fit shorter bar --- */
+  .btn {
     color: #1b2d48;
     background-color: #f6f1ea;
-    padding: 8px 16px;
-    border-radius: 25px;
-    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
     font-weight: 500;
     border: 2px solid #f6f1ea;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-.burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #f6f1ea;
-    margin: 4px;
-    transition: all 0.3 ease;
-}
-.burger.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-.burger.toggle .line2 {
-    opacity: 0;
-}
-.burger.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-.nav-social {
+  }
+  
+  /* --- BURGER --- */
+  .burger { display: none; flex-direction: column; cursor: pointer; }
+  .burger div { width: 25px; height: 3px; background-color: #f6f1ea; margin: 4px; transition: all 0.3s ease; }
+  .burger.toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
+  .burger.toggle .line2 { opacity: 0; }
+  .burger.toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
+  
+  /* --- SOCIALS — aligned with text, equal spacing --- */
+  .nav-social {
     display: flex;
     align-items: center;
-    gap: 5px;
-    padding-left: 12px;
-}
+    gap: 16px;
+  }
+  
   .nav-social a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 44px; /* adjust for circle size */
-    height: 44px;
-    border-radius: 50%;
-    /* background-color: #fff;  */
+    width: 32px;              /* same footprint as text height */
+    height: 32px;
     line-height: 0;
-    padding: 0; /* this keeps border thin */
-    box-sizing: content-box;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
   }
+  
   .nav-social a:hover { transform: scale(1.06); }
+  
+  /* Actual icon size (kept small to align with text height) */
+  .social-img,
   .nav-social a img {
-    width: 56px;  /* actual icon size — increase this */
-    height: 56px;
-    display: block;
-    object-fit: contain;
-  }
-  .social-img {
-    width: 55px;  /* actual icon size — increase this */
+    width: 55px;                /* make both icons same visual size */
     height: 55px;
-    border-radius: 40%;
-    object-fit: cover;
-  }
-  .social-icon {
-    font-size: 16px;
-    color: #fff;
+    object-fit: contain;
+    display: block;
+    border-radius: 0;           /* remove accidental rounding */
   }
   
-  .nav-social a:hover {
-    background-color: #f6f1ea;
-  }
+  /* Remove old hover background that could misalign spacing */
+  .nav-social a:hover .social-icon { color: #1b2d48; }
   
-  .nav-social a:hover .social-icon {
-    color: #1b2d48;
-  }
-
-@media (max-width: 768px) {
+  /* --- MOBILE --- */
+  @media (max-width: 768px) {
     nav {
+      height: 65px;             /* keep short on mobile too */
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      height: 85px;
     }
-    .logo {
-        margin-left: 0;
-        width: 140px;
-      }
-    .burger {
-        display: flex;
-      }
+    .logo { height: 40px; }     /* slightly smaller logo on mobile */
+  
+    .burger { display: flex; }
+  
     nav ul {
       position: absolute;
-      top: 85px;
+      top: 65px;                /* matches new nav height */
       left: 0;
       width: 100%;
-      height: calc(100vh - 85px);
+      height: calc(100vh - 65px);
       background: #1b2d48;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       transform: translateX(100%);
       transition: transform 0.3s ease-in-out;
+      gap: 18px;                /* nice vertical spacing between items */
     }
-    nav ul.open {
-        transform: translateX(0);
-    }
-    nav ul li {
-      margin: 15px 0;
-      font-size: 18px;
-    }
+    nav ul.open { transform: translateX(0); }
   
- 
+    nav ul li { font-size: 18px; }
+  
+    .nav-social { gap: 18px; }
+    .social-img,
+    .nav-social a img { width: 24px; height: 24px; } /* a touch larger on mobile */
   }
   

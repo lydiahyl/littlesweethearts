@@ -1,19 +1,24 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
-function Footer() {
+const currentYear = new Date().getFullYear();
+
+export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-grid">
-        <div className="footer-left">❤️ KinderHearts</div>
-        <div className="footer-center">© 2025 KinderHearts. All rights reserved.</div>
-        <div className="footer-right">
-          <a href="/terms">Terms of Service</a>
-          <a href="/privacy">Privacy Policy</a>
+    <footer className="k-footer" role="contentinfo">
+      <div className="k-footer__grid">
+        <div className="k-footer__left">
+        </div>
+
+        <div className="k-footer__center">
+          © {currentYear} | <strong>KinderHearts Preschool</strong> | Managed by
+          {" "}
+          <strong>Tadika Wawasan Elit (003717356-U)</strong> | All rights reserved.
+          <div className="k-note">
+            All information is correct at time of upload and is subject to change.
+          </div>
         </div>
       </div>
     </footer>
   );
 }
-
-export default Footer;

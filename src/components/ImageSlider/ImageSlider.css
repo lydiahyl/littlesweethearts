@@ -1,100 +1,95 @@
 .slider-container {
-    width: 100%;
-    height: 75vh;
-    position: relative;
-    overflow: hidden;
-    margin-top: 85px;
-  }
-  
-  .hero-swiper {
-    height: 100%;
-  }
-  
-  .slide-image {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-  .slide-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .slider-image::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    ;
-  }
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 5%;
-    z-index: 2;
-  }
-  
-  .slide-content {
-    color: #fff;
-    text-align: center;
-    max-width: 800px;
-  }
-  
-  .hero-title {
-    font-size: 2rem;
-    font-weight: 500;
-    margin: 0;
-    line-height: 1.2;
-    white-space: normal;
-    overflow: visible;
-    text-overflow: unset;
-  }
-  
-  .hero-subtitle {
-    font-size: 2rem;
-    font-weight: 400;
-    margin-top: 1rem;
-    line-height: 1.4;
+  width: 100%;
+  height: 75vh;
+  position: relative;
+  overflow: hidden;
+  margin-top: 75px;
 }
-  
-  .hero-tagline {
-    font-size: 1.3rem;
-    font-style: italic;
-    margin-bottom: 1rem;
+
+.hero-swiper { height: 100%; }
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FIXED: was .slider-image::before */
+.slide-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  /* optional: add a slight dark overlay for text contrast */
+  /* background: rgba(0,0,0,0.15); */
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5%;
+  z-index: 2;
+}
+
+.slide-content {
+  color: #fff;
+  text-align: center;
+  max-width: 800px;
+}
+
+/* Smaller title & subtitle with stronger selectors */
+.hero-swiper .overlay .slide-content .hero-title {
+  font-size: 2.6rem;     /* <-- adjust smaller/larger as you like */
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hero-swiper .overlay .slide-content .hero-subtitle {
+  font-size: 1.5rem;    /* <-- adjust smaller/larger as you like */
+  font-weight: 400;
+  margin-top: 0.6rem;
+  line-height: 1.4;
+}
+
+/* (Unused in your JSX but keeping) */
+.hero-tagline {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .slider-container { height: 80vh; }
+  .overlay {
+    justify-content: center;
+    padding-left: 0;
+    padding: 0 10px;
+    text-align: center;
   }
-  
-  .hero-description {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-top: 1rem;
+  .slide-content { max-width: 90%; }
+
+  .hero-swiper .overlay .slide-content .hero-title {
+    font-size: 1.4rem;
   }
-  
-  @media (max-width: 768px) {
-    .slider-container {
-      height: 80vh; 
-    }
-    .overlay {
-      justify-content: center;
-      padding-left: 0;
-      padding: 0 10px;
-      text-align: center;
-    }
-    .slide-content {
-      max-width: 90%;
-    }
-    .hero-title {
-      font-size: 1.8rem;
-    }
-  
-    .hero-subtitle {
-      font-size: 1.1rem;
-    }
+  .hero-swiper .overlay .slide-content .hero-subtitle {
+    font-size: 0.95rem;
   }
-  
+}

@@ -28,21 +28,21 @@ const Navbar = () => {
         <Link to="/about" onClick={() => setIsOpen(false)}><li>ABOUT KINDERHEARTS</li></Link>
         <Link to="/curriculum" onClick={() => setIsOpen(false)}><li>LEARNING JOURNEY</li></Link>
         <Link to="/admissions" onClick={() => setIsOpen(false)}><li>ADMISSIONS</li></Link>
-        <Link to="/contactus" onClick={() => setIsOpen(false)}><li><button className="btn">BOOK A KINDERTOUR</button></li></Link>
+        <Link to="/contactus" onClick={() => setIsOpen(false)}>
+      <li><button className="btn">BOOK A KINDERTOUR</button></li>
+     </Link>
 
-         {/* Social Icons */}
-         <li className="nav-social">
-         {/* <Link to="/contactus" onClick={() => setIsOpen(false)}><li><button className="btn">BOOK A KINDERTOUR</button></li></Link> */}
+  {/* Social Icons aligned with nav items */}
+      <li className="nav-social">
+      <a href="https://facebook.com/kinderheartspreschools" target="_blank" rel="noreferrer">
+        <img src={fbLogo} alt="Facebook" className="social-img" />
+      </a>
+      <a href="https://www.instagram.com/kinderhearts.official?igsh=MTR5Mm8yYXZyYXl5aQ==" target="_blank" rel="noreferrer">
+      <img src={instagramIcon} alt="Instagram" className="social-img" />
+    </a>
+  </li>
+</ul>
 
-          <a href="https://facebook.com/yourpage" target="_blank">
-            <img src={fbLogo} alt="Facebook" className="social-img" />
-          </a>
-          <a href="https://www.instagram.com/kinderhearts.official?igsh=MTR5Mm8yYXZyYXl5aQ==" target="_blank">
-            <img src={instagramIcon} alt="Instagram" className="social-img" />
-          </a>
-        </li>
-
-      </ul>
     </nav>
   )
 }

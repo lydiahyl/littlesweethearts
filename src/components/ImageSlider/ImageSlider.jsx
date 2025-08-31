@@ -7,9 +7,9 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import './ImageSlider.css'
 
-import image1 from '../../assets/first.png'
-import image2 from '../../assets/second.png'
-import image3 from '../../assets/third.png'
+import image1 from '../../assets/Banner_1.png'
+import image2 from '../../assets/Banner_2.png'
+import image3 from '../../assets/Banner_3.png'
 
 SwiperCore.use([Autoplay, Pagination])
 
@@ -26,7 +26,7 @@ const slides = [
   },
   {
     image: image3,
-    title: "Nurture · Grow · Explore ",
+    title: "Nurture · Discover · Flourish ",
     subtitle: "With All Our Hearts"
   }
 ]
@@ -36,7 +36,7 @@ function ImageSlider() {
   return (
     <div className="slider-container">
     <Swiper
-      autoplay={{ delay: 5000, disableOnInteraction: false }}
+      autoplay={{ delay: 7000, disableOnInteraction: false }}
       pagination={{ clickable: true }}
       loop={true}
       slidesPerView={1}
