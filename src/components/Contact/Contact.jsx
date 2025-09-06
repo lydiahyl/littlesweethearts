@@ -1,16 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Contact.css';
 import { motion } from 'framer-motion';
+import DatePicker from 'react-datepicker';
+import  "react-datepicker/dist/react-datepicker.css";
 import Footer from '../Footer/Footer';
 
+
 function ContactUs() {
-    const [result, setResult] = React.useState("");
+    const [tourDateTime, setTourDateTime, result, setResult] = React.useState("");
 
     const onSubmit = async (event) => {
       event.preventDefault();
       setResult("Sending....");
       const formData = new FormData(event.target);
-  
+      if (tourDateTime) {
+        formData.append("preferred_tour_datetime", tourDateTime,toISOString())
+      }
       formData.append("access_key", "d532030d-c7ad-46cd-ab4d-f1d354fc5a37");
   
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -21,7 +26,7 @@ function ContactUs() {
       const data = await response.json();
   
       if (data.success) {
-        setResult("Form Submitted Successfully");
+        setResult("Thank you! Your tour request has been received. Our team will be in touch soon to confirm your visit. We can't wait to welcome you to KinderHearts!");
         event.target.reset();
       } else {
         console.log("Error", data);
@@ -60,24 +65,26 @@ function ContactUs() {
 
         <form onSubmit={onSubmit} className="contact-form">
           <h2>Send Us a Message</h2>
-          <input type="text" name='name' placeholder="Name" required />
+          <input type="text" name='name' placeholder="Parent's Name" required />
           <input type='tel' name='phone' placeholder='Contact Number' required/>
-          <input type="email" name='email' placeholder="Email" required />
-          <textarea name="message" rows="9" placeholder='Message' required></textarea>
-          <button type="submit">Send Message</button>
-          <span className="form-result">{result}</span>
+          <input type="email" name='email' placeholder="Email Address" required />
+          <input type="text" name='age' placeholder="Child's Age" required />
 
-{/* 
-          <form onSubmit={onSubmit}>
-            <label>Your Name</label>
-            <input type="text" name="name" placeholder='Enter your name' required/>
-            <label>Phone Number</label>
-            <input type='tel' name='phone' placeholder='Enter your number' required/>
-            <label>Write your enquiry here</label>
-            <textarea name="message" rows="6" placeholder='Enter your message' required></textarea>
-            <button type='submit' className='btn dark-btn'>Submit now<img src={white_arrow} alt=""/></button>
-        </form> 
-        <span>{result}</span> */}
+         {/* ✅ React Datepicker */}
+          <label>Preferred Tour Date & Time</label>
+          <DatePicker
+            selected={tourDateTime}
+            onChange={(date) => setTourDateTime(date)}
+            showTimeSelect
+            timeFormat="HH:mm"
+            timeIntervals={30}   // intervals: 30 mins
+            dateFormat="MMMM d, yyyy h:mm aa"
+            placeholderText="Select date and time"
+            className="datepicker-input"
+          />
+          <textarea name="message" rows="9" placeholder='Message / Special Requests' required></textarea>
+          <button type="submit">Book My Tour</button>
+          <span className="form-result">{result}</span>
 
         </form>
       </section>

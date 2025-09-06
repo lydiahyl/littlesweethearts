@@ -104,7 +104,7 @@ function Curriculum() {
         </motion.section>
 
         {/* Accordion Section */}
-        <motion.section
+        {/* <motion.section
           className="calendar-box-section"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -114,7 +114,6 @@ function Curriculum() {
         <div className='term-box-container'>
         <motion.div className='term-box' whileHover={{ scale: 1.05 }}><h3>Term 1</h3><p>January - May</p></motion.div>
           <motion.div className='term-box' whileHover={{ scale: 1.05 }}><h3>Term 2</h3><p>June - December</p></motion.div>
-          {/* <motion.div className='term-box' whileHover={{ scale: 1.05 }}><h3>Term 3</h3><p>Jul - Sep</p></motion.div> */}
         </div>
       <div className='calendar-download'>
       <a
@@ -126,10 +125,10 @@ function Curriculum() {
           2025 Calendar
         </a>
       </div>
-      </motion.section>
+      </motion.section> */}
       
     {/* Daily Schedule */}
-     <motion.section
+     {/* <motion.section
       className="daily-schedule-section"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -153,7 +152,7 @@ function Curriculum() {
         </tbody>
      </table>
     </div>
-  </motion.section>
+  </motion.section> */}
 
   <Footer/>
 </div>

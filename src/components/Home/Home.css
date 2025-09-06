@@ -1,57 +1,49 @@
-
+/* ========== ABOUT ========== */
 .about-section {
-    background-color: #fdf9f6;
-    padding: 40px 0px 60px;
-    width: 100%;
-    overflow-x: hidden;
+  background-color: #fdf9f6;
+  padding: 40px 0 60px;
+  width: 100%;
+  overflow-x: hidden;
 }
-  .about {
-    max-width: 1100px;
-    margin: 0 auto; 
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
+.about {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
-.about-left {
-    flex-basis: 40%;
-    position: relative;
-}
-.about-right {
-    flex-basis: 56%;
-}
-.about-img {
-    width: 100%;
-    border-radius: 10px;
-}
+.about-left { flex-basis: 40%; position: relative; }
+.about-right { flex-basis: 56%; }
+.about-img { width: 90%; border-radius: 10px; }
 
 .about h3 {
-    font-weight: 600;
-    font-weight: 16px;
-    color: #212ea0
+  font-weight: 600;
+  font-size: 16px;           /* fixed from font-weight: 16px */
+  color: #212ea0;
 }
 .about h2 {
-    font-size: 21px;
-    color:#000F38;
-    margin: 10px 0;
-    max-width: 570px;
+  font-size: 21px;
+  color:#000F38;
+  margin: 10px 0;
+  max-width: 570px;
 }
-.about p{
-    color: #676767;
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-.about-btn-wrapper {
-  display: flex;
-  justify-content: flex-start; /* pushes button to the right */
-  margin-top: 1.5rem;
+.about p {
+  color: #676767;
+  margin-bottom: 15px;
+  line-height: 1.6;
 }
 
+.about-btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
 .learn-more-btn {
   background-color: #151E3F; /* navy */
-  color: #fff;           /* beige */
+  color: #fff;
   padding: 10px 20px;
   border-radius: 25px;
   font-size: 16px;
@@ -63,22 +55,15 @@
   gap: 8px;
   transition: all 0.3s ease;
 }
-
 .learn-more-btn:hover {
   background-color: transparent;
   color: #151E3F;
   border: 2px solid #151E3F;
 }
+.learn-more-btn .arrow { font-size: 18px; transition: transform .3s ease; }
+.learn-more-btn:hover .arrow { transform: translateX(4px); }
 
-.learn-more-btn .arrow {
-  font-size: 18px;
-  transition: transform 0.3s ease;
-}
-
-.learn-more-btn:hover .arrow {
-  transform: translateX(4px); /* arrow moves right slightly on hover */
-}
-
+/* ========== PROGRAMS ========== */
 .programs-section {
   background-color: #fff3e6;
   padding: 60px 0;
@@ -101,29 +86,21 @@
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3 ease, box-shadow 0.3s ease;
+  transition: transform .3s ease, box-shadow .3s ease;
   background: #fff;
 }
-.program:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-}
+.program:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 8px 16px rgba(0,0,0,0.12); }
 .program img {
   width: 100%;
   border-radius: 10px;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform .4s ease;
 }
-.program:hover img {
-  transform: scale(1.05);
-}
+.program:hover img { transform: scale(1.05); }
+
 .caption {
-  border-radius: 12px;
   position: absolute;
-  top: 100%;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  inset: 0;
   background: rgba(27, 45, 72, 0.85);
   display: flex;
   align-items: center;
@@ -133,22 +110,20 @@
   padding: 20px;
   border-radius: 12px;
   opacity: 0;
-  transition: top 0.4s ease, opacity 0.4s ease;
+  top: 100%;
+  transition: top .4s ease, opacity .4s ease;
   text-align: center;
   pointer-events: none;
 }
-.program:hover .caption {
-  top: 0;
-  opacity: 1;
-  pointer-events: auto;
-}
-.caption img {
-  width: 60px;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
-}
-.program:hover .caption img {
-  transform: scale(1.1);
+.program:hover .caption { top: 0; opacity: 1; pointer-events: auto; }
+.caption img { width: 60px; margin-bottom: 10px; transition: transform .3s ease; }
+.program:hover .caption img { transform: scale(1.1); }
+
+/* ========== FACILITIES (SLIDER) ========== */
+.facilities-section {
+  background-color: #fdf9f6;
+  padding: 60px 0;
+  text-align: center;
 }
 .facilities {
   max-width: 1100px;
@@ -156,167 +131,134 @@
   padding: 0 20px;
   box-sizing: border-box;
 }
-.facilities-section {
-  background-color: #fdf9f6;
-  padding: 60px 0;
-  text-align: center;
-}
-.facility {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-.facility img {
-  width: 23%;
-  border-radius: 10px;
-}
-.contact-section {
-  background-color: #fff3e6;
-  padding: 60px 0;
+
+/* Wrapper adds side space for outside arrows */
+.facilities-slider {
+  position: relative;
+  padding: 0 clamp(28px, 4vw, 56px);
 }
 
-.contact-wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
+/* Allow arrows to render outside the slide area */
+.facilities-swiper {
+  overflow: visible;
+  padding-bottom: 28px; /* space for dots */
 }
 
-.contact {
-  background-color: #fff3e6;
-  max-width: 100%;
-  padding: 0 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.contact-col {
-  flex-basis: 48%;
-  color: #676767;
-}
-.contact-col h3 {
-  color: #000F38;
-  font-weight: 500;
-  font-size: 25px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.contact-col h3 img {
-  width: 35px;
-  margin-left: 10px;
-}
-.contact-col p{
-  max-width: 450px;
-  list-style: 1.5;
-}
-.contact-col ul li {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-}
-.contact-col ul li img {
-  width: 25px;
-  margin-right: 10px;
-}
-.contact form input, .contact form textarea {
-  display: block;
+/* Taller cards */
+.facility-card {
   width: 100%;
-  background: #EBECFE;
-  padding: 15px;
-  border: 0;
-  outline: 0;
-  margin-bottom: 15px;
-  margin-top: 5px;
-  resize: none;
+  aspect-ratio: 2 / 3;       /* taller than 3/4 */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  background: #fff;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
 }
-.contact-col span {
+.facility-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  margin: 20px 0;
 }
+
+/* small title label on image */
+.facility-card_label {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  background: rgba(21,30,63,.85); /* navy */
+  color: #fff;
+  font-weight: 600;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  transition: opacity .2s ease;
+}
+
+/* overlay that shows description on hover / tap */
+.facility-card_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(21, 30, 63, 0.88);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 20px;
+  opacity: 0;
+  transform: translateY(6%);
+  transition: opacity .28s ease, transform .28s ease;
+  pointer-events: none;
+  border-radius: 16px;
+  overflow: visible;
+}
+.facility-card_overlay h4 { margin: 0 0 6px; font-size: 18px; }
+.facility-card_overlay p  { 
+  margin: 0; 
+  font-size: 14px; 
+  line-height: 1.45; 
+  overflow: auto; 
+}
+
+/* show overlay on hover (desktop) */
+.facility-card:hover .facility-card_overlay { opacity: 1; transform: translateY(0); pointer-events: auto; }
+/* dim label while overlay visible */
+.facility-card:hover .facility-card_label { opacity: .15; }
+/* show overlay when card has .show (mobile tap) */
+.facility-card_overlay.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+/* Swiper arrows outside + responsive */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #151E3F;
+  --swiper-navigation-size: clamp(18px, 2.2vw, 26px);
+  top: 45%;
+  z-index: 5;
+}
+.swiper-button-prev { left: calc(-1 * clamp(18px, 3vw, 40px)); }
+.swiper-button-next { right: calc(-1 * clamp(18px, 3vw, 40px)); }
+
+/* Dots */
+.swiper-pagination-bullet { background: #151E3F; opacity: .35; }
+.swiper-pagination-bullet-active { background: #151E3F; opacity: 1; }
+
+/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-    .about {
-      flex-direction: column;
-      text-align: center;
-      padding: 0 16px;
-    }
-  
-    .about-left,
-    .about-right {
-      flex-basis: 100%;
-    }
-  
-    .about h2 {
-      font-size: 28px;
-      margin: 20px 0 10px;
-    }
-  
-    .about p {
-      font-size: 16px;
-    }
-  
-    .play-icon {
-      width: 50px;
-    }
-    .programs {
-      flex-direction: column;
-      align-items: center;
-      padding: 0 16px;
-    }
-    .program {
-      flex-basis: 100%;
-      max-width: 100%;
-    }
-    .facility {
-      flex-direction: column;
-      gap: 20px;
-    }
-    .facility img {
-      width: 80%;
-    }
-    .contact { 
-      flex-direction: column;
-      gap: 40px;
-      padding: 0 16px;
-    }
-    .contact-col {
-      flex-basis: 100%;
-    }
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 16px;
   }
-  @keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translateX(40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  
-  
+  .about-left, .about-right { flex-basis: 100%; }
+  .about h2 { font-size: 28px; margin: 20px 0 10px; }
+  .about p { font-size: 16px; }
+
+  .programs { flex-direction: column; align-items: center; padding: 0 16px; }
+  .program { flex-basis: 100%; max-width: 100%; }
+
+  .facilities-slider { padding: 0 clamp(20px, 5vw, 40px); }
+  .facility-card { aspect-ratio: 9 / 16; } /* tall but phone-friendly */
+  .facility-card_overlay h4 { font-size: 17px; }
+  .facility-card_overlay p  { font-size: 13.5px; }
+
+  /* tuck arrows in a bit on small screens */
+  .swiper-button-prev { left: calc(-1 * clamp(12px, 4vw, 24px)); }
+  .swiper-button-next { right: calc(-1 * clamp(12px, 4vw, 24px)); }
+}
+
+/* ========== OPTIONAL: custom keyframes you had ========== */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

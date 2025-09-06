@@ -1,48 +1,42 @@
-import React, {useState } from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import logo from '../../assets/logo6.png'
-import facebookIcon from '../../assets/facebook-logo.png'
 import fbLogo from '../../assets/fb-blue.png'
 import instagramIcon from '../../assets/instagram-logo.webp'
-import { Link } from 'react-router-dom';
-// import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const handleToggle = () => setIsOpen((v) => !v)
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
   return (
-    // <nav className='container dark-nav'>
-      <nav className='dark-nav'>
-        <img src={logo} alt="" className='logo'/>
-        {/* Burger Icon */}
-        <div className="burger" onClick={handleToggle}>
-        <div className={`line1 ${isOpen ? 'toggle' : ''}`}></div>
-        <div className={`line2 ${isOpen ? 'toggle' : ''}`}></div>
-        <div className={`line3 ${isOpen ? 'toggle' : ''}`}></div>
+    <nav className='dark-nav'>
+    <Link to="/" onClick={() => setIsOpen(false)}>
+      <img src={logo} alt="KinderHearts" className='logo'/>
+      </Link>
+      {/* Burger */}
+      <div className={`burger ${isOpen ? 'toggle' : ''}`} onClick={handleToggle} aria-label="Toggle menu" aria-expanded={isOpen}>
+        <div className="line1" />
+        <div className="line2" />
+        <div className="line3" />
       </div>
+
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
         <Link to="/" onClick={() => setIsOpen(false)}><li>HOME</li></Link>
         <Link to="/about" onClick={() => setIsOpen(false)}><li>ABOUT KINDERHEARTS</li></Link>
         <Link to="/curriculum" onClick={() => setIsOpen(false)}><li>LEARNING JOURNEY</li></Link>
         <Link to="/admissions" onClick={() => setIsOpen(false)}><li>ADMISSIONS</li></Link>
-        <Link to="/contactus" onClick={() => setIsOpen(false)}>
-      <li><button className="btn">BOOK A KINDERTOUR</button></li>
-     </Link>
+        <Link to="/contactus" onClick={() => setIsOpen(false)}><li><button className="btn">BOOK A KINDERTOUR</button></li></Link>
 
-  {/* Social Icons aligned with nav items */}
-      <li className="nav-social">
-      <a href="https://facebook.com/kinderheartspreschools" target="_blank" rel="noreferrer">
-        <img src={fbLogo} alt="Facebook" className="social-img" />
-      </a>
-      <a href="https://www.instagram.com/kinderhearts.official?igsh=MTR5Mm8yYXZyYXl5aQ==" target="_blank" rel="noreferrer">
-      <img src={instagramIcon} alt="Instagram" className="social-img" />
-    </a>
-  </li>
-</ul>
-
+        <li className="nav-social">
+          <a href="https://facebook.com/kinderheartspreschools" target="_blank" rel="noreferrer">
+            <img src={fbLogo} alt="Facebook" className="social-img" />
+          </a>
+          <a href="https://www.instagram.com/kinderhearts.official?igsh=MTR5Mm8yYXZyYXl5aQ==" target="_blank" rel="noreferrer">
+            <img src={instagramIcon} alt="Instagram" className="social-img" />
+          </a>
+        </li>
+      </ul>
     </nav>
   )
 }

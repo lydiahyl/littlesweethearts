@@ -26,7 +26,7 @@ const slides = [
   },
   {
     image: image3,
-    title: "Nurture · Discover · Flourish ",
+    title: "Nurture · Explore · Grow",
     subtitle: "With All Our Hearts"
   }
 ]
