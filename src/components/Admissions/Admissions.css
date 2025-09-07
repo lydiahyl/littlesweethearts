@@ -7,20 +7,6 @@
     --ink:#444;
     --peach:#fdf9f6;
   }
-  
-  /* Global headings */
-  .admissions-page h1,
-  .admissions-page h2,
-  .admissions-page h3,
-  .admissions-page h4 {
-    font-family: "Merriweather", serif;
-    font-weight: 700;
-    letter-spacing: .3px;
-  }
-  
-  /* =========================================
-     HERO (full-bleed)
-  ========================================= */
   .admissions-hero{
     height: 75vh;
     min-height: 360px;
@@ -97,10 +83,6 @@
     margin:0 auto;
     padding:0 20px;
     text-align:left;
-  }
-  @media (max-width: 900px){
-    .grid-2{ grid-template-columns: 1fr; text-align:center; }
-    .grid-2 p{ margin-left:auto; margin-right:auto; }
   }
   
   /* =========================================
@@ -199,10 +181,5 @@
     .admissions-section{ padding:44px 0; }
     .admissions-section h2{ font-size:26px; }
     .admissions-section h3{ font-size:20px; }
-  }
-  @media (max-width: 520px){
-    .hero-title{ font-size:30px; }
-    .hero-content{ max-width:92vw; }
-    .table-wrap, .card.soft, .perks{ margin-left:0; margin-right:0; }
   }
   

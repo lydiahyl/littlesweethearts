@@ -11,9 +11,9 @@ export default function Footer() {
         </div>
 
         <div className="k-footer__center">
-          © {currentYear} | <strong>KinderHearts Preschool</strong> | Managed by
+          © {currentYear} | KinderHearts Preschool | Managed by
           {" "}
-          <strong>Tadika Wawasan Elit (003717356-U)</strong> | All rights reserved.
+          Tadika Wawasan Elit (003717356-U) | All rights reserved.
           <div className="k-note">
             All information is correct at time of upload and is subject to change.
           </div>

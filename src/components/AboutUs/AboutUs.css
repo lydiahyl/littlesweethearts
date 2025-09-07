@@ -1,18 +1,3 @@
-/* ========== GLOBAL HEADINGS ========== */
-h1, h2, h3, h4, h5, h6,
-.hero-title,
-.principal-message h2,
-.team-section h2,
-.philosophy-section h2,
-.vm-grid h3,
-.hearts-section h2,
-.heart-card h4,
-.values-section h2,
-.value-card h4 {
-  font-family: "Merriweather", serif;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-}
 
 /* ========== HERO ========== */
 .about-hero {
@@ -32,7 +17,6 @@ h1, h2, h3, h4, h5, h6,
   color: #fff;
   font-weight: bold;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
-  font-family: "Merriweather", serif;
   margin-bottom: 16px;
 }
 
@@ -67,7 +51,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .principal-img {
-  width: 240px;
+  width: 250px;
   border-radius: 12px;
   height: 260px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
@@ -95,7 +79,6 @@ h1, h2, h3, h4, h5, h6,
   color: #7C0A02;
   font-size: 26px;
   margin-bottom: 16px;
-  font-family: "Merriweather", serif;
 }
 .principal-message p {
   margin-bottom: 1.2em;
@@ -108,15 +91,15 @@ h1, h2, h3, h4, h5, h6,
   text-align: center;
 }
 
-/* keep headings aligned to same content width */
+/* keep headings & content aligned to same page width */
 .team-section h2,
 .team-section .section-lead,
 .team-section .team-grid,
 .team-section .team-note {
-  max-width: 1100px;        /* align with other sections */
+  max-width: 1100px;              /* align with other sections */
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;       /* side gutters */
+  padding-left: 20px;             /* side gutters */
   padding-right: 20px;
 }
 
@@ -124,60 +107,71 @@ h1, h2, h3, h4, h5, h6,
   font-size: 28px;
   color: #7C0A02;
   margin-bottom: 10px;
-  font-family: "Merriweather", serif;
 }
 
 .section-lead {
   font-size: 15px;
   color: #555;
   margin: 0 auto 30px;
-  max-width: 700px;         /* keep intro tighter */
+  max-width: 700px;               /* keep intro tighter */
 }
 
+/* grid for cards */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 28px;
 }
 
+/* card */
 .team-card {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.1);
   padding: 18px;
   transition: transform 0.3s ease;
+  display: grid;                  /* makes centering trivial */
+  justify-items: center;          /* center avatar + texts */
+  text-align: center;             /* center the labels */
 }
 .team-card:hover { transform: translateY(-6px); }
 
+/* avatar (perfect circle, centered) */
 .team-card img {
-  width: 112px;
-  height: 112px;
+  display: block;
+  width: 120px;                   /* a touch larger looks balanced */
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px;
+  object-position: 50% 50%;       /* center crop by default */
+  margin: 0 auto 12px;
 }
 
+.team-grid .team-card:first-child img {
+  object-position: 60% 30%;       
+}
+
+/* labels */
 .team-card h4 {
   font-size: 17px;
   margin: 6px 0 2px;
   color: #7C0A02;
   font-weight: 700;
-  font-family: "Merriweather", serif;
 }
-
 .team-card span {
   font-size: 14px;
   color: #444;
   display: block;
 }
 
+/* closing paragraph */
 .team-note {
   margin-top: 28px;
   font-size: 15px;
   line-height: 1.7;
   color: #444;
-  max-width: 900px;        /* narrower for readability */
-  text-align: justify;     /* neat alignment */
+  max-width: 900px;               /* narrower for readability */
+  text-align: justify;
 }
 
 /* ========== PHILOSOPHY ========== */
@@ -355,33 +349,5 @@ h1, h2, h3, h4, h5, h6,
 
   .vm-grid { grid-template-columns: 1fr; }
   .hearts-stack { max-width: 100%; }
-}
-
-/* Mobile tweaks */
-@media (max-width: 600px) {
-  .team-section h2,
-  .team-section .section-lead,
-  .team-section .team-grid,
-  .team-section .team-note {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .team-note { max-width: 100%; text-align: left; }
-}
-/* Phones */
-@media (max-width: 600px) {
-  .hero-title { font-size: 30px; }
-  .principal-message { font-size: 14px; }
-  .team-grid { grid-template-columns: 1fr; }
-  .values-section h2,
-  .hearts-section h2,
-  .philosophy-section h2 { font-size: 24px; }
-}
-
-/* Small phones */
-@media (max-width: 420px) {
-  .hero-title { font-size: 26px; }
-  .principal-img { width: 180px; }
-  .section-lead { font-size: 14px; }
 }
 

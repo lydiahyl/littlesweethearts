@@ -50,32 +50,34 @@ nav {
     transition: all .2s ease;
   }
   
-  /* --- SOCIALS (consistent size) --- */
-  .nav-social { 
-    display: flex; 
-    align-items: center; 
-    gap: 16px; 
+/* --- SOCIALS (bigger size & consistent) --- */
+.nav-social { 
+  display: flex; 
+  align-items: center; 
 } 
-  .nav-social a { 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    width: 32px; /* same footprint as text height */ 
-    height: 32px; line-height: 0; 
-    transition: transform 0.2s ease; 
+
+.nav-social a { 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 55px;   
+  height: 55px; 
+  line-height: 0; 
+  transition: transform 0.25s ease; 
 } 
-  .nav-social a:hover { 
-    transform: scale(1.06); 
-} /* Actual icon size (kept small to align with text height) */ 
-  .social-img, .nav-social a img { 
-    width: 55px; /* make both icons same visual size */ 
-    height: 55px; 
-    object-fit: contain; 
-    display: block; 
-    border-radius: 0; /* remove accidental rounding */ 
-} /* Remove old hover background that could misalign spacing */ 
-  .nav-social a:hover .social-icon { 
-    color: #1b2d48; }
+
+.nav-social a img, 
+.social-img { 
+  width: 80px; 
+  height: 80px; 
+  object-fit: contain; 
+  display: block; 
+}
+
+.nav-social a:hover { 
+  transform: scale(1.15); /* smoother, more noticeable hover */
+}
+
   /* --- BURGER --- */
   .burger { 
     display: none; 
@@ -96,7 +98,7 @@ nav {
   .burger.toggle .line3 { transform: translateY(-7px) rotate(-45deg); }
   
   /* ---------- MOBILE ---------- */
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     .burger { display: flex; }
     .logo { height: 40px; }
   

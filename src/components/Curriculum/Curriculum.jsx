@@ -1,162 +1,244 @@
-import React from 'react'
-import { motion } from "framer-motion"
-import './Curriculum.css'
-import Footer from '../Footer/Footer';
-import { FaLeaf, FaHeart, FaPuzzlePiece, FaBook } from 'react-icons/fa'
+import React from "react";
+import { motion } from "framer-motion";
+import "./Curriculum.css";
+import Footer from "../Footer/Footer";
 
-function Curriculum() {
+// Icons
+import {
+  FaLeaf,
+  FaHeart,
+  FaPuzzlePiece,
+  FaBook,
+  FaLanguage,
+  FaCalculator,
+  FaFlask,
+  FaPaintBrush,
+  FaSmile,
+  FaRunning,
+  FaHandsHelping,
+} from "react-icons/fa";
 
+const fadeUp = {
+  initial: { opacity: 0, y: 18 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.2 },
+  transition: { duration: 0.6 },
+};
+
+export default function Curriculum() {
   return (
-    <div className='curriculum-container'>
-        <motion.section
-          className="hero-section"
-          initial={{ opacity: 0, y: -30}}
-          animate={{ opacity: 1, y:0 }}
-          transition={{ duration: 1 }}
-        >   
-          <h1 className='hero-title'>Our Curriculum</h1>
-        </motion.section>
+    <div className="curriculum-page">
+      {/* Hero */}
+      <section className="hero-section">
+        <div className="hero-inner">
+          <motion.h1
+            className="hero-title"
+            initial={{ opacity: 0, y: -18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Exploring the World with Wonder and Joy
+          </motion.h1>
+          <motion.p
+            className="hero-subtitle"
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.08 }}
+          >
+            Through purposeful play, discovery, and inquiry, we inspire children to explore ideas,
+            ask questions, and find joy in learning every day.
+          </motion.p>
+        </div>
+      </section>
 
-        {/* Why It Stands Out */}
-        <motion.section
-          className="why-stand-out-section"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          <h2 className='section-title'>Why Our Curriculum Stands Out</h2>
-          <p className='section-text'>
-            At Little Hearts, we believe early learning should be joyful, creative, and purposeful. 
-            Our curriculum combines play-based experiences with intentional teaching moments to help children 
-            flourish intellectually, socially, and emotionally.
-          </p>
-        </motion.section>
-
-        {/* Curriculum Highlights */}
-        <motion.section
-          className='curriculum-highlights'
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-        >
-          <div className='highlight-cards'>
-            <motion.div className='highlight-card' whileHover={{ scale: 1.05 }}>
-              <FaPuzzlePiece className='highlight-icon' />
-              <h3>Play-Based Learning</h3>
-              <p>Children learn best through exploration, imagination, and fun.</p>
-            </motion.div>
-            <motion.div className='highlight-card' whileHover={{ scale: 1.05 }}>
-              <FaLeaf className='highlight-icon' />
-              <h3>Montessori Inspired</h3>
-              <p>Hands-on materials encourage independence and decision-making.</p>
-            </motion.div>
-            <motion.div className='highlight-card' whileHover={{ scale: 1.05 }}>
-              <FaHeart className='highlight-icon' />
-              <h3>Whole-Child Focus</h3>
-              <p>We nurture each child’s emotional and social well-being.</p>
-            </motion.div>
-            <motion.div className='highlight-card' whileHover={{ scale: 1.05 }}>
-              <FaBook className='highlight-icon' />
-              <h3>Creative Curriculum</h3>
-              <p>Storytelling, music, and art woven into everyday learning.</p>
-            </motion.div>
+      <main className="curriculum-wrap">
+        {/* Philosophy */}
+        <motion.section className="section cream" {...fadeUp}>
+          <div className="section-inner">
+            <h2 className="section-title">Our Philosophy of Teaching &amp; Learning</h2>
+            <p className="section-text">
+              At KinderHearts, learning is an active, joyful and purposeful journey — a path of
+              seeing, thinking, wondering, exploring, experimenting, imagining, and growing. We see
+              children as curious thinkers and capable learners, each developing in their own time.
+            </p>
+            <p className="section-text">
+              We believe every child is unique and shines in their own way. We value their
+              individual pace — recognising where they are and guiding them forward with intention,
+              care, and respect. Our role is to create a safe, nurturing space where curiosity is
+              sparked, questions are welcomed, and learning truly comes alive.
+            </p>
+            <p className="section-text">
+              From the earliest steps to confident leaps, our learning journey celebrates the whole
+              child — every little step of the way.
+            </p>
           </div>
         </motion.section>
 
-        {/* Teaching and learning table */}
-        <motion.section
-          className='teaching-table-section'
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0}}
-          transition={{ duration: 1, delay: 0.3 }}
-        >
-          <h2 className='section-title'>Teaching & Learning Approach</h2>
-          <table className="teaching-table">
-            <thead>
-              <tr>
-                <th>Aspect</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Philosophy</td>
-                <td>Play-based learning infused with Montessori principles</td>
-              </tr>
-              <tr>
-                <td>Focus</td>
-                <td>Fostering creativity, confidence, and curiosity in every child</td>
-              </tr>
-              <tr>
-                <td>Core Activities</td>
-                <td>Sensory play, storytelling, music, movement, art, and outdoor exploration</td>
-              </tr>
-              <tr>
-                <td>Learning Style</td>
-                <td>Hands-on, exploratory, and child-centered guided by experienced educators</td>
-              </tr>
-              <tr>
-                <td>Environment</td>
-                <td>Safe, nurturing, inclusive, and inspiring learning spaces</td>
-              </tr>
-            </tbody>
-          </table>
+        {/* Approach + Cards */}
+        <motion.section className="section white" {...fadeUp}>
+          <div className="section-inner">
+            <h2 className="section-title">Our Teaching &amp; Learning Approach</h2>
+            <p className="section-text">
+              At KinderHearts, we believe how children learn is just as important as what they
+              learn. Our approach is intentional, child-centred, and grounded in research-based
+              practices that support the development of the whole child.
+            </p>
+            <p className="section-text">We facilitate learning through:</p>
+
+            <div className="card-grid">
+              <div className="card">
+                <FaPuzzlePiece className="card-icon" />
+                <h3>Play-Based Learning</h3>
+                <p>
+                  Purposeful, imaginative play that builds language, social-emotional skills, and
+                  joyful discovery.
+                </p>
+              </div>
+
+              <div className="card">
+                <FaBook className="card-icon" />
+                <h3>Inquiry-Based Learning</h3>
+                <p>
+                  Curiosity-led learning that encourages children to ask questions, explore, and
+                  make meaning from their world.
+                </p>
+              </div>
+
+              <div className="card">
+                <FaHeart className="card-icon" />
+                <h3>Values-Driven Education</h3>
+                <p>
+                  Kindness, empathy, respect, and responsibility modelled daily through real
+                  relationships and everyday moments.
+                </p>
+              </div>
+
+              <div className="card">
+                <FaLeaf className="card-icon" />
+                <h3>Outdoor &amp; Nature-Inspired Experiences</h3>
+                <p>
+                  Nature becomes our classroom — encouraging movement, wonder, and a deeper
+                  connection to the world around us.
+                </p>
+              </div>
+            </div>
+
+            <p className="section-text mt-16">
+              Every moment — from classroom activities to garden adventures — is thoughtfully
+              designed to spark joy, deepen understanding, and grow little hearts with big purpose.
+            </p>
+          </div>
         </motion.section>
 
-        {/* Accordion Section */}
-        {/* <motion.section
-          className="calendar-box-section"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-        <h2 className='section-title'>School Calendar</h2>
-        <div className='term-box-container'>
-        <motion.div className='term-box' whileHover={{ scale: 1.05 }}><h3>Term 1</h3><p>January - May</p></motion.div>
-          <motion.div className='term-box' whileHover={{ scale: 1.05 }}><h3>Term 2</h3><p>June - December</p></motion.div>
-        </div>
-      <div className='calendar-download'>
-      <a
-        href="/LittleSweetheartsCalendar.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="download-button"
-        >
-          2025 Calendar
-        </a>
-      </div>
-      </motion.section> */}
-      
-    {/* Daily Schedule */}
-     {/* <motion.section
-      className="daily-schedule-section"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1, delay: 1 }}
-      >
-      <h2 className='section-title'>Daily Schedule</h2>
-      <div className="schedule-table-container">
-      <table className='schedule-table'>
-      <thead>
-        <tr><th>Time</th><th>Activity</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>8:00 AM</td><td>Arrival & Free Play</td></tr>
-        <tr><td>9:00 AM</td><td>Circle Time & Learning Activities</td></tr>
-        <tr><td>10:30 AM</td><td>Snack Time</td></tr>
-        <tr><td>11:00 AM</td><td>Outdoor Play</td></tr>
-        <tr><td>12:00 PM</td><td>Lunch & Story Time</td></tr>
-        <tr><td>1:00 PM</td><td>Nap/Quiet Time</td></tr>
-        <tr><td>3:00 PM</td><td>Creative Activities</td></tr>
-        <tr><td>4:00 PM</td><td>Home Time</td></tr>
-        </tbody>
-     </table>
+        {/* Our Curriculum */}
+        <motion.section className="section cream" {...fadeUp}>
+          <div className="section-inner">
+            <h2 className="section-title">Our Curriculum</h2>
+            <h4 className="section-tag">Rooted in Purpose, Guided by Heart</h4>
+
+            <p className="section-text">
+              At KinderHearts, we follow the National Preschool Curriculum (KSPK) set by Malaysia’s
+              Ministry of Education — a trusted framework designed to support the holistic
+              development of children aged 4 to 6. To enrich this foundation, we thoughtfully
+              integrate key elements from the UK’s Early Years Foundation Stage (EYFS) — a globally
+              recognised approach that emphasises learning through play, exploration, and meaningful
+              relationships.
+            </p>
+            <p className="section-text">
+              Together, these frameworks offer a well-rounded, internationally informed curriculum
+              that value both local standards and global best practices. By blending structure with
+              flexibility, we ensure that every child receives a strong foundation that is locally
+              rooted and globally minded.
+            </p>
+            <p className="section-text">
+              We focus on nurturing the whole child — intellectually, emotionally, socially,
+              physically, and morally — through integrated, thematic learning that connects
+              meaningfully across subject areas. Children learn through a balance of guided
+              instruction and open-ended exploration, building the essential skills and values that
+              prepare them for both school and life.
+            </p>
+
+            <h3 className="section-subtitle">What We Focus On</h3>
+
+            <div className="focus-grid">
+              <div className="focus-card">
+                <FaLanguage className="focus-icon" />
+                <h4>Language &amp; Communication</h4>
+                <p>
+                  We strengthen English, Bahasa Malaysia, and Mandarin through storytelling,
+                  conversation, songs, imaginative play, and expressive activities that build both
+                  confidence and communication skills.
+                </p>
+              </div>
+
+              <div className="focus-card">
+                <FaCalculator className="focus-icon" />
+                <h4>Early Mathematics &amp; Thinking Skills</h4>
+                <p>
+                  Mathematical thinking is nurtured through play and real-life experiences that
+                  build early number sense, reasoning, and problem-solving abilities.
+                </p>
+              </div>
+
+              <div className="focus-card">
+                <FaFlask className="focus-icon" />
+                <h4>Science &amp; Discovery</h4>
+                <p>
+                  Children explore the natural world through hands-on inquiry, nature walks,
+                  observation, and experimentation.
+                </p>
+              </div>
+
+              <div className="focus-card">
+                <FaPaintBrush className="focus-icon" />
+                <h4>Creative Arts</h4>
+                <p>
+                  Imagination comes alive through music, movement, visual arts, and storytelling —
+                  encouraging self-expression and creative thinking.
+                </p>
+              </div>
+
+              <div className="focus-card">
+                <FaSmile className="focus-icon" />
+                <h4>Social &amp; Emotional Development</h4>
+                <p>
+                  We help children understand themselves and others, building emotional awareness,
+                  empathy, friendships, and the foundations for healthy relationships and
+                  resilience.
+                </p>
+              </div>
+
+              <div className="focus-card">
+                <FaRunning className="focus-icon" />
+                <h4>Physical Development</h4>
+                <p>
+                  Through active play, outdoor exploration, and fine motor activities, children
+                  strengthen their coordination, balance, and overall physical wellbeing.
+                </p>
+              </div>
+
+              <div className="focus-card">
+                <FaHandsHelping className="focus-icon" />
+                <h4>Humanity &amp; Moral Values</h4>
+                <p>
+                  We nurture hearts by instilling universal values such as kindness, respect,
+                  gratitude, and responsibility — guiding children to care for themselves, for
+                  others, and the world around them.
+                </p>
+              </div>
+            </div>
+
+            <p className="section-text mt-16">
+              Our curriculum is intentional and child-centred yet flexible, allowing educators to
+              respond to children’s interests and developmental needs while ensuring meaningful
+              progression. Whether it's a planned lesson or a spontaneous moment of discovery, every
+              learning is an opportunity to grow, discover, and shine.
+            </p>
+          </div>
+        </motion.section>
+      </main>
+
+      <Footer />
     </div>
-  </motion.section> */}
-
-  <Footer/>
-</div>
-  )
+  );
 }
-
-export default Curriculum

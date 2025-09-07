@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import logo from '../../assets/logo6.png'
-import fbLogo from '../../assets/fb-blue.png'
-import instagramIcon from '../../assets/instagram-logo.webp'
+import fbLogo from '../../assets/fbb.png'
+import instagramIcon from '../../assets/igg.png'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {

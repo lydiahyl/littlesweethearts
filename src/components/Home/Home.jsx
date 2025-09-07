@@ -16,16 +16,16 @@ import program_icon_1 from '../../assets/childrenicon2.png';
 import program_icon_2 from '../../assets/christmasicon2.png';
 import program_icon_3 from '../../assets/holidayicon.png';
 
-import facility_1 from '../../assets/facility-1.jpeg';
-import facility_2 from '../../assets/facility-2.jpeg';
-import facility_3 from '../../assets/facility-3.jpeg';
-import facility_4 from '../../assets/facility-4.jpeg';
+import facility_1 from '../../assets/comingsoon.png';
+import facility_2 from '../../assets/comingsoon.png';
+import facility_3 from '../../assets/comingsoon.png';
+import facility_4 from '../../assets/comingsoon.png';
 import facility_5 from '../../assets/comingsoon.png';
 import facility_6 from '../../assets/comingsoon.png';
 import facility_7 from '../../assets/comingsoon.png';
 import facility_8 from '../../assets/comingsoon.png';
 import facility_9 from '../../assets/comingsoon.png';
-import facility_10 from '../../assets/comingsoon.png';
+
 
 
 import Title from '../Title/Title';
@@ -95,13 +95,13 @@ function Home() {
         'Where little hearts find their rhythm! Our Music Corner inspires creativity, confidence, and joy as children explore sounds, beats, and melodies. From playful instruments to sing-along sessions, it’s a space where self-expression truly shines.'
     },
     {
-      title: 'Art & Messy Learning',
+      title: 'Art & Messy Learning Corner',
       img: facility_7,
       desc:
         'Creativity knows no bounds here! Through painting, crafting, building, and hands-on exploration, children learn to express their ideas freely, embrace differences, and celebrate their imagination. It’s where tiny hands create big magic.'
     },
     {
-      title: 'Pretend Play',
+      title: 'Pretend Play Corner',
       img: facility_8,
       desc:
         'Our Pretend Play Corner is where imagination takes the lead. With a charming kitchen set and thoughtfully curated props, children step into different roles — little chefs, shopkeepers, or storytellers — learning to collaborate, communicate, and create. Through playful make-believe, they develop social skills, empathy, and confidence.'
@@ -112,12 +112,6 @@ function Home() {
       desc:
         'A space designed to spark curiosity and develop essential skills through water play, sand exploration, and engaging fine motor activities. As children touch, pour, splash, dig, scoop, stack, turn, flip, and build, they naturally strengthen focus, coordination, problem-solving, hand-eye coordination, and early pre-writing abilities — all while having endless fun.'
     },
-    {
-      title: 'KinderSpaces',
-      img: facility_10,
-      desc:
-        'Thoughtfully designed environments across the school that support social, emotional, physical, and cognitive development — where every child feels seen and supported.'
-    }
   ];
 
   useEffect(() => {
@@ -146,7 +140,7 @@ function Home() {
                explorers, and bright stars, each shining in their own special way. We nurture their
                curiosity, guide their growth, and celebrate their learning every step of the way.
           </p>
-           <p> And because every child’s learning journey is unique, we partner closely with parents
+           <p> And because every child’s learning journey is unique, we work closely with parents
                to ensure every child feels supported, inspired, and ready to take on the world.
            </p>
 
@@ -188,12 +182,30 @@ function Home() {
           </div>
         </div>
       </div>
-
+{/* === KinderSpaces Intro (before images) === */}
+<section className="kspace-intro" data-aos="fade-up">
+  <div className="kspace-container">
+          <Title subTitle="KinderSpaces" />
+          <p>
+      At KinderHearts, every corner is thoughtfully designed to inspire curiosity, creativity, and a
+      lifelong love of learning. From classrooms equipped with 21st-century learning tools to playful
+      spaces that nurture imagination and exploration, each environment reflects our belief that the
+      heart of education is the education of the heart.
+    </p>
+    <br/>
+    <p>
+      Children learn best when they feel safe, valued, and loved, which is why we blend hands-on
+      experiences, collaborative play, and balanced use of technology to spark discovery while
+      protecting their natural wonder. Whether they’re exploring the Science Garden, getting cozy
+      in the Library, playing in the Castle-themed Playground, or creating in our Art &amp; Sensory
+      Corners, every experience is designed to develop essential skills while keeping joy and
+      connection at the heart of learning.
+    </p>
+  </div>
+</section>
       {/* === Facilities slider with hover/tap overlays === */}
       <div className="facilities-section" data-aos="fade-up">
         <div className="facilities">
-          <Title subTitle="KinderSpaces" />
-
           <div className="facilities-slider">
             <Swiper
               modules={[Autoplay, Pagination, Navigation]}

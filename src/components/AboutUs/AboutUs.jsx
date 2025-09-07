@@ -1,94 +1,129 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./AboutUs.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import principal from "../../assets/founder.jpg";
-import teacher1 from "../../assets/teacher1.jpeg";
-import teacher2 from "../../assets/teacher2.jpeg";
+import teacher1 from "../../assets/teacher1.png";
+import teacher2 from "../../assets/teacher2.png";
 import Footer from "../Footer/Footer";
 
 const AboutUs = () => {
+  const [showMore, setShowMore] = useState(false);
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (
     <>
-   {/* Hero */}
-  <section className="about-hero" data-aos="fade-in" aria-label="KinderHearts About Hero">
-  <div className="hero-content">
-    <h1 className="hero-title">Nurturing Little Hearts for a Big World</h1>
-    {/* <p className="hero-subtitle">
-      At KinderHearts, the heart of education is love, care, and connection — 
-      where little learners are nurtured to grow into curious, compassionate, 
-      and confident individuals, ready to take on the world with kindness and courage.
-    </p> */}
-  </div>
-</section>
+      {/* Hero */}
+      <section className="about-hero" data-aos="fade-in" aria-label="KinderHearts About Hero">
+        <div className="hero-content">
+          <h1 className="hero-title">Nurturing Little Hearts for a Big World</h1>
+          {/* New subtitle (same hook/classes as Admissions) */}
+          <p className="hero-subtitle">
+            At KinderHearts, the heart of education is love, care, and connection —
+            where little learners are nurtured to grow into curious, compassionate, and
+            confident individuals, ready to take on the world with kindness and courage.
+          </p>
+        </div>
+      </section>
 
-<section className="principal-section" data-aos="fade-up">
-  <div className="principal-container">
-    {/* Left: portrait + name/title */}
-    <div className="principal-left" data-aos="fade-right">
-      <img src={principal} alt="principal" className="principal-img" />
-      <div className="teacher-info">
-        <strong>Eunice Ho</strong><br />
-        Founder &amp; Head of School<br />
-        Bachelor of Education (Hons.)
-      </div>
-    </div>
-    <div className="principal-message" data-aos="fade-left">
-    <h2>From the heart of our founder</h2>
-    {/* Short intro */}
-    <div className="principal-intro" data-aos="fade-left">
-      <p>Dear Parents and Families,</p>
-      <p>Welcome to KinderHearts — where everything begins with heart.</p>
-    </div>
-    {/* Long body (starts directly below the picture, spans full width) */}
-    <article className="principal-body" data-aos="fade-up">
-      <p>Starting KinderHearts has been more than a professional journey — it has always been my dream to build a space where children feel genuinely happy, safe, valued, and loved. A place where every little heart is cherished, and where parents, too, are supported and empowered in their parenting journey. When school and home come together in love, understanding, and intention, beautiful things happen. And children flourish in every way.</p>
+      {/* Principal's message — with "Read more" from the specified paragraph */}
+      <section className="principal-section" data-aos="fade-up">
+        <div className="principal-container">
+          {/* Left: portrait + name/title */}
+          <div className="principal-left" data-aos="fade-right">
+            <img src={principal} alt="principal" className="principal-img" />
+            <div className="teacher-info">
+              <strong>Eunice Ho</strong><br />
+              Founder &amp; Head of School<br />
+              Bachelor of Education (Hons.)
+            </div>
+          </div>
 
-      <p>As both an educator and a lifelong learner, I’m passionate about the significant impact of early childhood education. Over the years, I’ve had the privilege of teaching children from early years to secondary levels, both in Malaysia and abroad — including Australia and Japan. My journey has also extended into leadership roles, with experiences as a preschool principal and as part of school management teams. From local, private, and international schools to children’s ministries and diverse educational settings, each experience has shaped my expectations of what a nurturing preschool should be.</p>
+          <div className="principal-message" data-aos="fade-left">
+            <h2>From the Heart of Our Founder</h2>
 
-      <p>KinderHearts is the dream brought to life through those experiences and love for children — a school that blends global insights with local values and best practices. We’re not here to reinvent the wheel, but to refine it. Through constant reflection, purpose, and heart, we strive to keep doing better — for the betterment of both teaching and learning.</p>
+            {/* Short intro */}
+            <div className="principal-intro">
+              <p>Dear Parents and Families,</p>
+              <p>Welcome to KinderHearts — where everything begins with heart.</p>
+            </div>
 
-      <p>At KinderHearts, we believe that the heart of education is the education of the heart. These early years are not simply about preparing children for school — they’re about nurturing who they are and who they are becoming. KinderHearts is designed to move at a child’s pace — where wonder is welcomed, questions are celebrated, and kindness leads the way.</p>
-
-      <p>Everything we do, we do with intention — and with all our hearts. From the grass children play on, to the fabric of their uniforms, the meals we plan, and the layout of our playground — every detail is carefully designed and chosen with our children’s wellbeing and happiness in mind.</p>
-
-      <p>Our preschool is more than just a school. It’s a community built on connection, love, and trust. We recognise each child's uniqueness while nurturing shared values, friendships, and a sense of belonging. With a team of passionate educators, we provide a warm, inspiring space where learning is joyful, play is purposeful, and every child’s heart and mind are nurtured with care.</p>
-
-      <p>As the Founder and Head of School, I am committed to being present — greeting children with smiles, listening to their stories, and celebrating their milestones. Together with our dedicated team, we create meaningful, hands-on experiences that spark imagination, build resilience, and lay the foundation for lifelong learning.</p>
-
-      <p>Above all, I aim for this school to be a truly safe space — where children are free to wonder, explore, and flourish. A place where parents can leave their children each morning with peace of mind, knowing they are loved, respected, and guided with care.</p>
-
-      <p>Our children — our sweethearts, our darlings — are not just learners; they are individuals who are truly seen, heard, valued, and loved the right way.</p>
-
-      <p>And most importantly, we walk this journey with you. We value strong school-family relationships, and when children feel safe, supported, and loved both at school and at home, they thrive.</p>
-
-      <p>Thank you for choosing KinderHearts, and for entrusting us with your most precious treasure. I look forward to walking this journey with you, hand in hand, heart to heart. As you explore KinderHearts, I invite you to see not just what we do, but why we do it.</p>
-
-      <p>This is more than a school. It’s a community. A family. A place where little hearts grow big dreams.</p>
-
-      <p>After all, all I truly wish is for KinderHearts to be our children’s happy place — filled with joyful memories and the colourful childhood they so deserve.</p>
-
-      <p>Let them learn, let them laugh,<br />Let them lead, let them play,<br />Let children be children.</p>
-
-      <p>With all my heart,<br />Eunice Ho<br />Founder &amp; Head of School<br />KinderHearts Preschool</p>
-    </article>
-  </div>
-  </div>
-  </section>
+            {/* Body BEFORE the toggle */}
+            <article className="principal-body">
+            <p>
+            Starting KinderHearts has been more than a professional journey — 
+            it’s the realisation of a vision I’ve long carried: to create a space 
+            where children feel safe, loved, and truly happy, and where parents feel 
+            supported in their journey too. When school and home come together in love, 
+            understanding, and purpose, beautiful things happen. Children thrive. 
+            Children flourish.
+            </p>
+            <p>
+            My journey in education — from teaching across Malaysia and abroad, in local, 
+            private, and international schools, to leading preschools and engaging with diverse 
+            communities — has shaped my understanding of what a nurturing school should be. 
+            KinderHearts brings these insights together, blending global perspectives with local 
+            values and effective practices.
+            </p>
+            <p>
+            We believe the heart of education lies in the education of the heart. 
+            At KinderHearts, learning is joyful, play is purposeful, and every detail — 
+            from the classrooms to the playground — is thoughtfully designed with children’s 
+            wellbeing in mind.
+            </p>
+            <p>
+            We’re not here to reinvent the wheel, but to refine it. Through reflection, intention, 
+            and heart, we strive to keep doing better — for the betterment of both teaching and learning.
+            </p>
+            <p>
+            This is more than a school. It’s a warm, connected community, a family — where every child is seen, 
+            every voice matters, and kindness leads the way. A place where parents can leave their children with 
+            peace of mind, knowing they are loved, respected, and guided with care. A place where little hearts grow big dreams.
+            </p>
+            <p>
+            Thank you for choosing KinderHearts and entrusting us with your precious little ones. 
+            I look forward to walking this journey with you — hand in hand, heart to heart. 
+            As you explore KinderHearts, I invite you to see not just what we do, but why we do it.
+            </p>
+            <p>
+            Above all, I hope for KinderHearts to be our children’s safe, happy place — 
+            filled with joyful memories and the colours of childhood they so deserve. 
+            </p>
+            <p>
+            <strong>Let them learn, let them lead,
+            <br/>
+            Let them play, let them laugh.
+            <br/>
+            Let children be children.</strong>
+            </p>
+            <br/>
+            <p>
+            With all my heart, <br/>
+            Eunice Ho<br/>
+            Founder & Head of School<br/>
+            KinderHearts Preschool<br/>
+            </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
       {/* Meet the Team */}
       <section className="team-section" data-aos="fade-up">
         <h2>Meet the Team</h2>
         <p className="section-lead">
-          The Hearts Behind KinderHearts — caring educators who bring warmth,
-          purpose, and heart to all they do.
+          The Hearts Behind KinderHearts
           <br />
           At KinderHearts, our strength lies in our people. Behind every smile
-          and story is a team of passionate educators.
+          and story is a team of passionate educators who bring warmth, purpose, and heart to all they do.
+          <br/>
+          More than qualified professionals, they are caring individuals who genuinely love working with children
+           — nurturing each little one with intention, joy, and love. 
+           Together, we create a safe, joyful, and inspiring environment where curiosity is encouraged, 
+           kindness is demonstrated, and every child is empowered to flourish.
         </p>
 
         <div className="team-grid">
@@ -97,13 +132,13 @@ const AboutUs = () => {
             <h4>Hee Yoke Ping</h4>
             <span>Head Teacher</span>
           </div>
-
-          <div className="team-card" data-aos="zoom-in" data-aos-delay="200">
-            <img src={teacher2} alt="Eloise Lai" />
-            <h4>Eloise Lai</h4>
-            <span>Homeroom Teacher</span>
+          <div className="team-card" data-aos="zoom-in" data-aos-delay="100"> 
+          <img src={teacher2} alt="Eloise Lai" /> 
+          <h4>Eloise Lai</h4> 
+          <span>Homeroom Teacher</span> 
+          </div> 
           </div>
-        </div>
+
 
         <p className="team-note" data-aos="fade-up">
           We grow alongside our children — constantly reflecting, learning, and
@@ -119,20 +154,18 @@ const AboutUs = () => {
         <div className="container">
           <h2>Our Philosophy</h2>
           <p className="section-lead">
-            The Heart of Education is the Education of the Heart.
+            The Heart of Education is the Education of the Heart
           </p>
           <p className="body">
             At KinderHearts, we believe the heart of education is the education
             of the heart.
-            <br />
-            <br />
+            <br /><br />
             Early childhood is the most critical period for nurturing minds,
             shaping values, and building the foundation for lifelong learning.
             Our preschool is a safe, joyful, and inspiring place where every
             child is known, loved, and supported to thrive in their own unique
             way.
-            <br />
-            <br />
+            <br /><br />
             Here, children feel empowered to explore, encouraged to ask
             questions, and celebrated for who they are. With a nurturing
             environment and intentional teaching, we help children develop a
@@ -163,45 +196,30 @@ const AboutUs = () => {
               and the wider community.
             </p>
             <ul className="checklist">
-              <li>
-                <strong>Nurturing hearts</strong> through love, care, patience,
-                and positive relationships.
-              </li>
-              <li>
-                <strong>Inspiring minds</strong> through purposeful play, rich
-                learning experiences, and hands-on discovery.
-              </li>
-              <li>
-                <strong>Empowering growth</strong> by supporting each child’s
-                unique strengths, voice, and learning journey.
-              </li>
-              <li>
-                <strong>Partnering with families</strong> to build trust and
-                create a connected, inclusive, and supportive community.
-              </li>
-              <li>
-                <strong>Fostering kindness, creativity, and courage</strong> in
-                every child, every day.
-              </li>
+              <li><strong>Nurturing hearts</strong> through love, care, patience, and positive relationships.</li>
+              <li><strong>Inspiring minds</strong> through purposeful play, rich learning experiences, and hands-on discovery.</li>
+              <li><strong>Empowering growth</strong> by supporting each child’s unique strengths, voice, and learning journey.</li>
+              <li><strong>Partnering with families</strong> to build trust and create a connected, inclusive, and supportive community.</li>
+              <li><strong>Fostering kindness, creativity, and courage</strong> in every child, every day.</li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* HEARTS Values — single vertical column, no decorative line */}
+      {/* HEARTS Values */}
       <section className="hearts-section" data-aos="fade-up">
         <div className="container">
           <h2>Our Core Values — The HEARTS of KinderHearts</h2>
-          <p className="section-lead">Our values are the heartbeat of everything we do.</p>
+          {/* <p className="section-lead">Our values are the heartbeat of everything we do.</p> */}
 
           <div className="hearts-stack">
             {[
-              ["H", "Holistic", "We grow in every way—physically, emotionally, socially, intellectually, and creatively through balances. Every little step matters, and every step forward is worth celebrating."],
+              ["H", "Holistic", "We grow in every way — physically, emotionally, socially, intellectually, and creatively through balanced, meaningful experiences. Every little step matters, and every step forward is worth celebrating."],
               ["E", "Empathy", "We care about how others feel and treat everyone with kindness, compassion, and respect in every interaction — big or small."],
               ["A", "Authenticity", "We are true to who we are and proud of what makes us special — our thoughts, our feelings, and our stories."],
               ["R", "Resilience", "We try again and again, even when things get tricky. Mistakes help us grow, and we learn to bounce back with courage and confidence."],
               ["T", "Trust", "We build trust by being honest, fair, and open. We listen, take turns, and help each other feel safe, valued, and loved."],
-              ["S", "Sustainability", "We care for our world, protect our environment, and live responsibly — every small act makes a big difference."]
+              ["S", "Sustainability", "We take care of our world, protect our environment, and live responsibly — every small act makes a big difference."]
             ].map(([letter, title, text]) => (
               <div className="heart-card" key={letter} data-aos="zoom-in">
                 <span className="badge">{letter}</span>
@@ -214,21 +232,16 @@ const AboutUs = () => {
           </div>
 
           <div className="kinder-cta" data-aos="fade-up">
-            <p className="kinder-line">
-              <strong>KINDER</strong> is at the heart of it all.
-            </p>
+            <p className="kinder-line"><strong>KINDER</strong> is at the heart of it all.</p>
             <p className="kinder-sub">
               It reminds us to lead with kindness, nurture one another, grow
-              together, and make our school a place full of joy, purpose and
+              together, and to make our school a place full of joy, purpose and
               love — for everyone, every day.
             </p>
           </div>
         </div>
       </section>
 
-    
-
-      {/* keep footer white in your Footer.css */}
       <Footer />
     </>
   );

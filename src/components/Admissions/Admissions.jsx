@@ -22,21 +22,13 @@ export default function Admissions() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            ADMISSIONS
+             Growing Bright Stars, One Step at a Time
           </motion.h1>
           <motion.p
             className="hero-subtitle"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.08 }}
-          >
-            Growing Bright Stars, One Step at a Time
-          </motion.p>
-          <motion.p
-            className="hero-tagline"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
           >
             Begin your child’s learning journey with us. From their first hello to graduation day,
             we’re here to guide, support, and grow with your family.
@@ -65,7 +57,7 @@ export default function Admissions() {
           </p>
 
           <div className="card soft">
-            <h4 className="card-title">School Calendar (Key Terms)</h4>
+            <h4 className="card-title">School Terms</h4>
             <ul className="bullet">
               <li><strong>Term 1:</strong> January – April</li>
               <li><strong>Term 2:</strong> May – August</li>
@@ -176,7 +168,7 @@ export default function Admissions() {
               <div>
                 <h4>Sibling Discount</h4>
                 <p>
-                  Families enrolling more than one child at KinderHearts enjoy a
+                  Families enrolling more than one child at KinderHearts will enjoy a
                   <strong> 5% discount</strong> on tuition fees for the first, second, and
                   subsequent children.
                 </p>
@@ -187,14 +179,14 @@ export default function Admissions() {
               <div>
                 <h4>Parent Referral Programme</h4>
                 <p>
-                  We are grateful when families share their KinderHearts experience with others.
-                  As a thank you, you will receive a <strong>RM200 rebate</strong> for every
+                  We're grateful when families share their KinderHearts experience with others.
+                  As a thank you, you'll receive a <strong>RM200 rebate</strong> for every
                   successful referral who enrols with us. Thank you for helping us grow our
                   community with love.
                 </p>
               </div>
             </div>
-            <p className="tnc">* Terms and conditions apply</p>
+            <p className="tnc">Terms and conditions apply</p>
           </div>
         </motion.section>
       </main>
