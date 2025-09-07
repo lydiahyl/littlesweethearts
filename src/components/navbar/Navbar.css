@@ -100,7 +100,7 @@ nav {
   /* ---------- MOBILE ---------- */
   @media (max-width: 768px) {
     .burger { display: flex; }
-    .logo { height: 40px; }
+    .logo { height: 180px; }
   
     /* slide-in panel */
     nav ul {
@@ -127,7 +127,7 @@ nav {
   
     /* socials anchored near bottom for breathing room */
     .nav-social { margin-top: auto; padding-bottom: 24px; gap: 18px; }
-    .nav-social a { width: 40px; height: 40px; }
-    .nav-social a img, .social-img { width: 24px; height: 24px; }
+    .nav-social a { width: 65px; height: 65px; }
+    .nav-social a img, .social-img { width: 75px; height: 75px; }
   }
   

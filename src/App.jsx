@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Whatsapp from './components/Whatsapp/Whatsapp'
 import Contact from './components/Contact/Contact'
 import ScrollToTop from './Scroll'
-import { Analytics } from "@vercel/analytics/next"
+// import { Analytics } from "@vercel/analytics/next"
 
 const App = () => {
   return (
@@ -25,7 +25,7 @@ const App = () => {
         <Route path='/contactus' element={<Contact/>} />
       </Routes>
     </Router>
-    <Analytics />
+    {/* <Analytics /> */}
 
     </div>
   )
