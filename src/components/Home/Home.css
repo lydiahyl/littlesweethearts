@@ -6,9 +6,9 @@
   overflow-x: hidden;
 }
 .about {
-  max-width: 1100px;
+  max-width: 1100px;           /* consistent width */
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px;             /* consistent side padding */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +21,7 @@
 
 .about h3 {
   font-weight: 600;
-  font-size: 16px;           /* fixed from font-weight: 16px */
+  font-size: 16px;
   color: #212ea0;
 }
 .about h2 {
@@ -42,7 +42,7 @@
   margin-top: 1.5rem;
 }
 .learn-more-btn {
-  background-color: #151E3F; /* navy */
+  background-color: #151E3F;
   color: #fff;
   padding: 10px 20px;
   border-radius: 25px;
@@ -71,9 +71,9 @@
   overflow-x: hidden;
 }
 .programs {
-  max-width: 1100px;
+  max-width: 1100px;          /* aligned with About */
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;            /* consistent padding */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -121,13 +121,25 @@
 
 /* ========== FACILITIES (SLIDER) ========== */
 .kspace-intro {
-  background: #fdf9f6;        /* cream, matches your theme */
-  padding: 56px 20px;
+  background: #fdf9f6;
+  padding: 32px 20px 16px;
 }
-.kspace-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
+.kspace-container{ max-width:1100px; margin:0 auto; padding:0 20px; }
+.kspace-container p{
+  margin: 10px 0 12px;   /* smaller paragraph margins */
+  line-height: 1.75;
+}
+.kspace-container p:last-of-type{ margin-bottom: 0; }
+
+/* Reduce top padding on the slider section that follows */
+.kspace-intro + .facilities-section{
+  /* was: padding: 60px 0;  (set elsewhere) */
+  padding-top: 24px;
+}
+.kspace-container h2,
+.kspace-container .title,
+.kspace-container .subtitle{
+  margin-bottom: 12px;
 }
 .facilities-section {
   background-color: #fdf9f6;
@@ -138,6 +150,7 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
+  padding-top: 0;
   box-sizing: border-box;
 }
 
@@ -156,7 +169,7 @@
 /* Taller cards */
 .facility-card {
   width: 100%;
-  aspect-ratio: 2 / 3;       /* taller than 3/4 */
+  aspect-ratio: 2 / 3;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0,0,0,.08);
@@ -178,7 +191,7 @@
   position: absolute;
   left: 12px;
   bottom: 12px;
-  background: rgba(21,30,63,.85); /* navy */
+  background: rgba(21,30,63,.85);
   color: #fff;
   font-weight: 600;
   padding: 6px 10px;
@@ -187,7 +200,7 @@
   transition: opacity .2s ease;
 }
 
-/* overlay that shows description on hover / tap */
+/* overlay */
 .facility-card_overlay {
   position: absolute;
   inset: 0;
@@ -205,21 +218,13 @@
   overflow: visible;
 }
 .facility-card_overlay h4 { margin: 0 0 6px; font-size: 18px; }
-.facility-card_overlay p  { 
-  margin: 0; 
-  font-size: 14px; 
-  line-height: 1.45; 
-  overflow: auto; 
-}
+.facility-card_overlay p  { margin: 0; font-size: 14px; line-height: 1.45; overflow: auto; }
 
-/* show overlay on hover (desktop) */
 .facility-card:hover .facility-card_overlay { opacity: 1; transform: translateY(0); pointer-events: auto; }
-/* dim label while overlay visible */
 .facility-card:hover .facility-card_label { opacity: .15; }
-/* show overlay when card has .show (mobile tap) */
 .facility-card_overlay.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
 
-/* Swiper arrows outside + responsive */
+/* Swiper arrows */
 .swiper-button-prev,
 .swiper-button-next {
   color: #151E3F;
@@ -230,7 +235,6 @@
 .swiper-button-prev { left: calc(-1 * clamp(18px, 3vw, 40px)); }
 .swiper-button-next { right: calc(-1 * clamp(18px, 3vw, 40px)); }
 
-/* Dots */
 .swiper-pagination-bullet { background: #151E3F; opacity: .35; }
 .swiper-pagination-bullet-active { background: #151E3F; opacity: 1; }
 
@@ -249,16 +253,15 @@
   .program { flex-basis: 100%; max-width: 100%; }
 
   .facilities-slider { padding: 0 clamp(20px, 5vw, 40px); }
-  .facility-card { aspect-ratio: 9 / 16; } /* tall but phone-friendly */
+  .facility-card { aspect-ratio: 9 / 16; }
   .facility-card_overlay h4 { font-size: 17px; }
   .facility-card_overlay p  { font-size: 13.5px; }
 
-  /* tuck arrows in a bit on small screens */
   .swiper-button-prev { left: calc(-1 * clamp(12px, 4vw, 24px)); }
   .swiper-button-next { right: calc(-1 * clamp(12px, 4vw, 24px)); }
 }
 
-/* ========== OPTIONAL: custom keyframes you had ========== */
+/* ========== OPTIONAL ANIMATIONS ========== */
 @keyframes fadeInLeft {
   from { opacity: 0; transform: translateX(-40px); }
   to   { opacity: 1; transform: translateX(0); }

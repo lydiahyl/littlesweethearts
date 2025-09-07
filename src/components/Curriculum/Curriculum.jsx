@@ -30,7 +30,7 @@ export default function Curriculum() {
     <div className="curriculum-page">
       {/* Hero */}
       <section className="hero-section">
-        <div className="hero-inner">
+        <div className="hero-inner container">
           <motion.h1
             className="hero-title"
             initial={{ opacity: 0, y: -18 }}
@@ -54,7 +54,7 @@ export default function Curriculum() {
       <main className="curriculum-wrap">
         {/* Philosophy */}
         <motion.section className="section cream" {...fadeUp}>
-          <div className="section-inner">
+          <div className="container">
             <h2 className="section-title">Our Philosophy of Teaching &amp; Learning</h2>
             <p className="section-text">
               At KinderHearts, learning is an active, joyful and purposeful journey — a path of
@@ -76,7 +76,7 @@ export default function Curriculum() {
 
         {/* Approach + Cards */}
         <motion.section className="section white" {...fadeUp}>
-          <div className="section-inner">
+          <div className="container">
             <h2 className="section-title">Our Teaching &amp; Learning Approach</h2>
             <p className="section-text">
               At KinderHearts, we believe how children learn is just as important as what they
@@ -132,7 +132,7 @@ export default function Curriculum() {
 
         {/* Our Curriculum */}
         <motion.section className="section cream" {...fadeUp}>
-          <div className="section-inner">
+          <div className="container">
             <h2 className="section-title">Our Curriculum</h2>
             <h4 className="section-tag">Rooted in Purpose, Guided by Heart</h4>
 

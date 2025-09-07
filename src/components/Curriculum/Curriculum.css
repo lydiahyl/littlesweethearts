@@ -1,172 +1,210 @@
 /* Theme (uses your existing palette) */
-:root{
-  --navy:#151E3F;
-  --red:#7C0A02;
-  --khaki:#BEAB8F;
-  --cream:#fdf9f6;
+:root {
+  --navy: #151E3F;
+  --red: #7C0A02;
+  --khaki: #BEAB8F;
+  --cream: #fdf9f6;
+}
+
+/* Global container for consistent alignment */
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Page wrapper */
 .curriculum-page {
-  background:#fff;
-  color:#222;
+  background: #fff;
+  color: #222;
 }
 
 /* HERO */
-.hero-section{
+.hero-section {
   height: 75vh;
   min-height: 360px;
   margin-top: 75px;
-  display:flex; align-items:center; justify-content:center;
-  text-align:center; padding: 0 20px;
-  background: linear-gradient(rgba(21,30,63,.78), rgba(21,30,63,.78)),
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  background: linear-gradient(rgba(21, 30, 63, .78), rgba(21, 30, 63, .78)),
     url('../../assets/curriculum.png') center/cover no-repeat;
 }
-.hero-inner{ max-width: 1000px; }
-.hero-title{
+.hero-inner {
+  max-width: 1000px;
+}
+.hero-title {
   font-size: clamp(30px, 5.5vw, 56px);
   font-weight: 700;
   color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,.25);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .25);
   margin-bottom: 8px;
 }
-.hero-subtitle{
+.hero-subtitle {
   font-size: clamp(16px, 2.2vw, 22px);
   color: #fff;
   opacity: .95;
   max-width: 900px;
   margin: 0 auto;
   line-height: 1.6;
-  text-shadow: 0 1px 6px rgba(0,0,0,.25);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, .25);
 }
 
 /* BODY WRAP */
-.curriculum-wrap{
-  display:block;
+.curriculum-wrap {
+  display: block;
 }
 
 /* SECTION base */
-.section{
+.section {
   padding: 56px 20px;
 }
-.section .section-inner{
-  max-width: 1100px;
-  margin: 0 auto;
+.section .container {
   text-align: center;
 }
-.section.white{ background:#fff; }
-.section.cream{ background: var(--cream); }
+.section.white {
+  background: #fff;
+}
+.section.cream {
+  background: var(--cream);
+}
 
-.section-title{
+.section-title {
   font-size: 28px;
   color: var(--red);
   margin-bottom: 12px;
   font-weight: 700;
 }
-.section-tag{
+.section-tag {
   font-size: 16px;
   color: var(--navy);
   margin: 4px 0 12px;
   font-weight: 700;
 }
-.section-subtitle{
+.section-subtitle {
   margin-top: 18px;
   margin-bottom: 10px;
   font-size: 22px;
   color: var(--navy);
 }
 
-.section-text{
+.section-text {
   max-width: 900px;
   margin: 0 auto 12px;
   font-size: 15.5px;
   line-height: 1.75;
-  color:#444;
+  color: #444;
 }
 
 /* ---- Approach cards ---- */
-.card-grid{
-  display:grid;
+.card-grid {
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
   margin-top: 16px;
-  text-align: center; /* center content inside each card */
 }
-.card{
-  background:#fff;
+.card {
+  background: #fff;
   border: 2px solid var(--khaki);
   border-radius: 14px;
   padding: 24px 18px;
-  text-align: center;  /* center text + icon */
-  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .06);
   transition: transform .25s ease, box-shadow .25s ease;
 }
-.card:hover{
+.card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
 }
-.card-icon{
-  font-size: 36px;   /* a little bigger for balance */
+.card-icon {
+  font-size: 36px;
   color: var(--navy);
   margin-bottom: 10px;
-  display: inline-block; /* ensures it's centered */
+  display: inline-block;
 }
-.card h3{
+.card h3 {
   font-size: 18px;
   color: var(--navy);
   margin: 0 0 6px;
 }
-.card p{
+.card p {
   font-size: 14.5px;
-  color:#444;
-  line-height:1.6;
+  color: #444;
+  line-height: 1.6;
 }
 
 /* ---- What We Focus On (vertical layout) ---- */
-.focus-grid{
+.focus-grid {
   margin-top: 20px;
-  display:flex;
-  flex-direction: column;   /* stack all vertically */
-  gap: 16px;
-  max-width: 800px;         /* keep it readable */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
-.focus-card{
-  background:#fff;
+
+.focus-card {
+  background: #fff;
   border: 2px solid var(--khaki);
   border-radius: 14px;
   padding: 20px;
   text-align: left;
   box-shadow: 0 6px 16px rgba(0,0,0,.06);
 }
-.focus-icon{
+
+/* ✅ Center the last card if odd number */
+.focus-grid .focus-card:last-child {
+  grid-column: span 2;   /* take full width of the grid */
+  justify-self: center;  /* center itself */
+  max-width: 500px;      /* optional: limit width so it doesn’t stretch too wide */
+}
+.focus-icon {
   font-size: 26px;
   color: var(--red);
   margin-bottom: 8px;
-  display:block;
+  display: block;
 }
-.focus-card h4{
+.focus-card h4 {
   font-size: 17px;
   color: var(--navy);
   margin: 0 0 6px;
 }
-.focus-card p{
+.focus-card p {
   font-size: 14.5px;
-  color:#444;
-  line-height:1.65;
+  color: #444;
+  line-height: 1.65;
 }
 
 /* Utilities */
-.mt-16{ margin-top: 16px; }
+.mt-16 {
+  margin-top: 16px;
+}
 
 /* Responsive */
-@media (max-width: 768px){
-  .card-grid{ grid-template-columns: repeat(2, 1fr); }
-  .focus-grid{ grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-@media (max-width: 768px){
-  .card-grid{ grid-template-columns: 1fr; }
-  .focus-grid{ grid-template-columns: 1fr; }
-  .section-title{ font-size: 24px; }
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+  .focus-grid .focus-card:last-child {
+    grid-column: auto;   /* normal on mobile */
+    max-width: 100%;
+  }
+  .section-title {
+    font-size: 24px;
+  }
 }

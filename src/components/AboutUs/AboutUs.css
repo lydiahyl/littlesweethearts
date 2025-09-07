@@ -1,5 +1,27 @@
+/* ===== GLOBAL SAFETY (stop horizontal scroll everywhere) ===== */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;     /* kill stray horizontal scroll */
+}
+* { box-sizing: border-box; }
+img, video, canvas, svg { max-width: 100%; height: auto; display: block; }
 
-/* ========== HERO ========== */
+/* Optional: ensure no child can exceed viewport width */
+section, .container, .principal-container, .team-grid, .vm-grid {
+  max-width: 100vw;
+}
+/* Global container for consistent side alignment */
+.container {
+  max-width: 1100px;   /* or 1200px if you prefer */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;   /* same side gutters */
+  padding-right: 20px;
+  width: 100%;          /* prevent overflow */
+  box-sizing: border-box;
+}
+
+/* ===== HERO (unchanged visually; safe paddings) ===== */
 .about-hero {
   height: 75vh;
   background: linear-gradient(rgba(21,30,63,0.75), rgba(21,30,63,0.75)),
@@ -9,9 +31,8 @@
   align-items: center;
   margin-top: 75px;
   text-align: center;
-  padding: 0 20px; /* prevent text sticking to edges */
+  padding: 0 20px;
 }
-
 .hero-title {
   font-size: 48px;
   color: #fff;
@@ -19,7 +40,6 @@
   text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
   margin-bottom: 16px;
 }
-
 .hero-subtitle {
   font-size: 18px;
   color: #fdfdfd;
@@ -28,15 +48,13 @@
   line-height: 1.6;
   font-weight: 300;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-  font-family: "Merriweather", serif;
 }
 
-/* ========== PRINCIPAL MESSAGE ========== */
+/* ===== PRINCIPAL MESSAGE (desktop = 2-col grid) ===== */
 .principal-section {
   background: #fdf9f6;
   padding: 60px 20px;
 }
-
 .principal-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -45,162 +63,105 @@
   column-gap: 40px;
   align-items: start;
 }
-
-.principal-left {
-  text-align: center;
-}
-
+.principal-left { text-align: center; }
 .principal-img {
   width: 250px;
   border-radius: 12px;
-  height: 260px;
+  /* Avoid fixed height on mobile causing overflow/crop issues */
+  height: auto;
+  aspect-ratio: 1/1.04;              /* keeps a tidy portrait shape without stretching */
+  object-fit: cover;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
+.teacher-info { margin-top: 12px; font-size: 15px; color: #444; }
+.teacher-info strong { color: #7C0A02; font-size: 17px; font-weight: 600; }
 
-.teacher-info {
-  margin-top: 12px;
-  font-size: 15px;
-  color: #444;
-}
-.teacher-info strong {
-  color: #7C0A02;
-  font-size: 17px;
-  font-weight: 600;
-}
-
-/* Right side: heading + all paragraphs */
 .principal-message {
   color: #444;
   font-size: 15.5px;
   line-height: 1.75;
-  max-width: 100%;  /* use full right column */
+  max-width: 100%;
 }
 .principal-message h2 {
   color: #7C0A02;
   font-size: 26px;
   margin-bottom: 16px;
 }
-.principal-message p {
-  margin-bottom: 1.2em;
-  text-align: justify;
-}
-/* ========== TEAM SECTION ========== */
+.principal-message p { margin-bottom: 1.2em; text-align: justify; }
+
+/* ===== TEAM (center avatars perfectly; safe widths) ===== */
 .team-section {
   background: #fff3e6;
   padding: 56px 20px;
   text-align: center;
 }
-
-/* keep headings & content aligned to same page width */
+/* .team-section h2,
+.team-section .section-lead,
+.team-section .team-grid,
+.team-section .team-note {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+} */
+.team-section h2 { font-size: 28px; color: #7C0A02; margin-bottom: 10px; }
+.section-lead { font-size: 15px; color: #555; margin: 0 auto 30px; max-width: 700px; }
 .team-section h2,
 .team-section .section-lead,
 .team-section .team-grid,
 .team-section .team-note {
-  max-width: 1100px;              /* align with other sections */
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;             /* side gutters */
-  padding-right: 20px;
 }
-
-.team-section h2 {
-  font-size: 28px;
-  color: #7C0A02;
-  margin-bottom: 10px;
-}
-
-.section-lead {
-  font-size: 15px;
-  color: #555;
-  margin: 0 auto 30px;
-  max-width: 700px;               /* keep intro tighter */
-}
-
-/* grid for cards */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 28px;
 }
-
-/* card */
 .team-card {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.1);
   padding: 18px;
   transition: transform 0.3s ease;
-  display: grid;                  /* makes centering trivial */
-  justify-items: center;          /* center avatar + texts */
-  text-align: center;             /* center the labels */
+  display: grid;
+  justify-items: center;
+  text-align: center;
 }
 .team-card:hover { transform: translateY(-6px); }
-
-/* avatar (perfect circle, centered) */
 .team-card img {
   display: block;
-  width: 120px;                   /* a touch larger looks balanced */
+  width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: 50% 50%;       /* center crop by default */
+  object-position: 50% 50%;
   margin: 0 auto 12px;
 }
+/* nudge teacher1 a hair lower/centered (optional) */
+.team-grid .team-card:first-child img { object-position: 50% 40%; }
 
-.team-grid .team-card:first-child img {
-  object-position: 60% 30%;       
-}
+.team-card h4 { font-size: 17px; margin: 6px 0 2px; color: #7C0A02; font-weight: 700; }
+.team-card span { font-size: 14px; color: #444; display: block; }
 
-/* labels */
-.team-card h4 {
-  font-size: 17px;
-  margin: 6px 0 2px;
-  color: #7C0A02;
-  font-weight: 700;
-}
-.team-card span {
-  font-size: 14px;
-  color: #444;
-  display: block;
-}
-
-/* closing paragraph */
 .team-note {
   margin-top: 28px;
   font-size: 15px;
   line-height: 1.7;
   color: #444;
-  max-width: 900px;               /* narrower for readability */
+  max-width: 900px;
   text-align: justify;
 }
 
-/* ========== PHILOSOPHY ========== */
-.philosophy-section {
-  padding: 56px 20px;
-  background: #fdf9f6;
-  text-align: center;
-}
+/* ===== OTHER SECTIONS (unchanged except safe widths already above) ===== */
+.philosophy-section { padding: 56px 20px; background: #fdf9f6; text-align: center; }
 .philosophy-section .container { max-width: 1200px; margin: 0 auto; }
-.philosophy-section h2 {
-  font-size: 28px;
-  color: #7C0A02;
-  margin-bottom: 12px;
-}
-.section-lead {
-  font-size: 17px;
-  font-weight: 500;
-  margin-bottom: 16px;
-  color: #151E3F;
-}
-.philosophy-section .body {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 15px;
-  line-height: 1.7;
-  color: #555;
-}
+.philosophy-section h2 { font-size: 28px; color: #7C0A02; margin-bottom: 12px; }
+.section-lead { font-size: 15px; font-weight: 500; margin-bottom: 16px; color: #151E3F; }
+.philosophy-section .body { max-width: 800px; margin: 0 auto; font-size: 15px; line-height: 1.7; color: #555; }
 
-/* ========== VISION & MISSION ========== */
 .vm-section { background: #fff; padding: 56px 20px; }
 .vm-grid {
   display: grid;
@@ -216,38 +177,15 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   text-align: left;
 }
-.vm-grid h3 {
-  color: #7C0A02;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.vm-grid p, .checklist li {
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: #444;
-}
+.vm-grid h3 { color: #7C0A02; font-size: 20px; margin-bottom: 10px; }
+.vm-grid p, .checklist li { font-size: 14.5px; line-height: 1.6; color: #444; }
 .checklist { margin-top: 10px; padding-left: 18px; }
 .checklist li { margin-bottom: 6px; }
 
-/* ========== HEARTS VALUES ========== */
-.hearts-section {
-  padding: 56px 20px;
-  background: #fdf9f6;
-  text-align: center;
-}
+.hearts-section { padding: 56px 20px; background: #fdf9f6; text-align: center; }
 .hearts-section .container { max-width: 1200px; margin: 0 auto; }
-.hearts-section h2 {
-  font-size: 28px;
-  color: #7C0A02;
-  margin-bottom: 14px;
-}
-.hearts-stack {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-  max-width: 760px;
-  margin: 0 auto;
-}
+.hearts-section h2 { font-size: 28px; color: #7C0A02; margin-bottom: 14px; }
+.hearts-stack { display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 760px; margin: 0 auto; }
 .heart-card {
   display: grid;
   grid-template-columns: 56px 1fr;
@@ -261,93 +199,68 @@
   text-align: left;
 }
 .heart-card .badge {
-  width: 42px;
-  height: 42px;
-  line-height: 42px;
-  text-align: center;
-  border-radius: 50%;
-  background: #7C0A02;
-  color: #fff;
-  font-weight: 700;
+  width: 42px; height: 42px; line-height: 42px; text-align: center;
+  border-radius: 50%; background: #7C0A02; color: #fff; font-weight: 700;
 }
 .heart-card h4 { margin: 0 0 4px; font-size: 18px; color: #151E3F; }
-.heart-card p { margin: 0; font-size: 14px; color: #444; }
-
+.heart-card p  { margin: 0; font-size: 14px; color: #444; }
 .kinder-cta { margin-top: 24px; max-width: 700px; margin-left: auto; margin-right: auto; }
 .kinder-line { font-size: 17px; color: #7C0A02; }
 .kinder-sub  { font-size: 14.5px; color: #333; margin-top: 6px; }
 
-/* ========== ICON VALUES ========== */
-.values-section {
-  background: #fff3e6;
-  padding: 56px 20px;
-  text-align: center;
-}
-.values-section h2 {
-  font-size: 28px;
-  color: #7C0A02;
-  margin-bottom: 24px;
-}
-.value-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 22px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.value-card {
-  background: #fff;
-  border: 2px solid #ffd9b3;
-  padding: 20px;
-  border-radius: 14px;
-  width: 250px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
-.value-card:hover { transform: translateY(-6px); }
-.value-card img { width: 58px; margin-bottom: 8px; }
-.value-card h4 { font-size: 17px; margin-bottom: 6px; color: #151E3F; }
-.value-card p  { font-size: 14px; color: #555; }
-
-
-/* ========== RESPONSIVE ========== */
-
-/* Large tablets / small laptops */
+/* ===== RESPONSIVE (≤1024 & ≤900 unchanged) ===== */
 @media (max-width: 1024px) {
   .hero-title { font-size: 42px; }
-  .principal-container { gap: 32px; }
+  .principal-container { column-gap: 28px; }
   .principal-message { font-size: 15px; }
 }
-
-/* Tablets */
 @media (max-width: 900px) {
   .hero-title { font-size: 38px; }
-  .principal-left { flex: 0 0 240px; }
   .principal-img { width: 220px; }
   .team-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
 }
 
-/* Large phones / small tablets */
+/* ===== MOBILE (≤768px): stack image first, copy below; align spacing; lock widths ===== */
 @media (max-width: 768px) {
+  /* Ensure page never grows wider than viewport */
+  body, html { width: 100%; max-width: 100%; overflow-x: hidden; }
+
   .hero-title { font-size: 34px; }
 
-  /* stack principal section nicely on mobile */
   .principal-container {
+    /* switch from grid to column stack */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: left;
+    gap: 16px;                  /* tight vertical rhythm */
+    padding-left: 0;
+    padding-right: 0;
   }
-  .principal-left { text-align: center; }
-  .principal-img { width: 200px; }
-  .principal-message {
-    max-width: 680px;
-    width: 100%;
-    font-size: 14.5px;
-    line-height: 1.7;
-  }
+  .principal-left   { order: 1; }
+  .principal-message{ order: 2; width: 100%; max-width: 680px; font-size: 14.5px; line-height: 1.7; }
+  .principal-img    { width: min(240px, 80vw); }
 
-  .vm-grid { grid-template-columns: 1fr; }
-  .hearts-stack { max-width: 100%; }
+  .team-grid { grid-template-columns: 1fr; gap: 22px; }
+  .values-section h2,
+  .hearts-section h2,
+  .philosophy-section h2 { font-size: 24px; }
+
+  /* keep all section contents inside viewport padding on mobile */
+  .team-section h2,
+  .team-section .section-lead,
+  .team-section .team-grid,
+  .team-section .team-note,
+  .philosophy-section .container,
+  .vm-grid,
+  .hearts-section .container {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 100%;
+  }
 }
 
+/* ===== SMALL PHONES ===== */
+@media (max-width: 420px) {
+  .hero-title { font-size: 28px; }
+  .principal-img { width: min(200px, 76vw); }
+}

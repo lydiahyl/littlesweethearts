@@ -113,19 +113,21 @@ const AboutUs = () => {
 
       {/* Meet the Team */}
       <section className="team-section" data-aos="fade-up">
+      <div className="container">
         <h2>Meet the Team</h2>
         <p className="section-lead">
           The Hearts Behind KinderHearts
-          <br />
+          </p>
+          <p className="body">
           At KinderHearts, our strength lies in our people. Behind every smile
           and story is a team of passionate educators who bring warmth, purpose, and heart to all they do.
-          <br/>
+          <br/><br/>
           More than qualified professionals, they are caring individuals who genuinely love working with children
            — nurturing each little one with intention, joy, and love. 
            Together, we create a safe, joyful, and inspiring environment where curiosity is encouraged, 
            kindness is demonstrated, and every child is empowered to flourish.
         </p>
-
+        <br/>
         <div className="team-grid">
           <div className="team-card" data-aos="zoom-in" data-aos-delay="100">
             <img src={teacher1} alt="Hee Yoke Ping" />
@@ -138,8 +140,6 @@ const AboutUs = () => {
           <span>Homeroom Teacher</span> 
           </div> 
           </div>
-
-
         <p className="team-note" data-aos="fade-up">
           We grow alongside our children — constantly reflecting, learning, and
           striving to do better every day. Every member of our team is recruited
@@ -147,6 +147,7 @@ const AboutUs = () => {
           If you know someone who shares our love for early childhood education,
           we’d love your referral. <em>Great hearts recognise great hearts.</em>
         </p>
+        </div>
       </section>
 
       {/* Philosophy */}
