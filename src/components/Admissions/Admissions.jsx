@@ -64,8 +64,8 @@ export default function Admissions() {
               <li><strong>Term 3:</strong> September – December</li>
             </ul>
             <div className="links">
-              <a href="#" className="btn-outline">School Calendar 2025</a>
-              <a href="#" className="btn-outline">School Calendar 2026</a>
+              <a href="/KinderHeartsCalendar_2025.pdf" target="_blank" rel="noopener noreferrer" className="btn-outline">School Calendar 2025</a>
+              <a href="/KinderHeartsCalendar_2026.pdf" target="_blank" rel="noopener noreferrer" className="btn-outline">School Calendar 2026</a>
             </div>
           </div>
         </motion.section>
@@ -186,7 +186,7 @@ export default function Admissions() {
                 </p>
               </div>
             </div>
-            <p className="tnc">Terms and conditions apply</p>
+            <p className="tnc">Terms and Conditions Apply</p>
           </div>
         </motion.section>
       </main>

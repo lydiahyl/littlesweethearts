@@ -87,7 +87,7 @@
   /* BUTTONS */
   .links {
     display:flex; gap:12px; flex-wrap:wrap;
-    justify-content:left; margin-top:10px;
+    justify-content:center; margin-top:10px;
   }
   .btn-outline, .btn-primary {
     padding:10px 16px; border-radius:999px; font-weight:600; 

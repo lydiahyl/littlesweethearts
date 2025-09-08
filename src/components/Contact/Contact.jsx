@@ -64,7 +64,7 @@ function ContactUs() {
           </div>
 
           {/* Right column */}
-          <aside className="mission-panel">
+          {/* <aside className="mission-panel">
             <h2>More Than a Preschool</h2>
             <p>
               At KinderHearts, we believe that every child is unique, full of potential,
@@ -90,7 +90,7 @@ function ContactUs() {
               it’s about helping little hearts grow big. Our classrooms are full of laughter,
               creativity, and curiosity, where every child is celebrated for who they are.
             </p>
-          </aside>
+          </aside> */}
         </div>
       </section>
 
