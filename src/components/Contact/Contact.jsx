@@ -32,7 +32,7 @@ function ContactUs() {
             <p className="contact-intro">Got questions? We’re here for you.</p>
 
             <ul className="contact-details">
-              <li><strong>🕒 Hours:</strong> 8:30 AM – 6:00 PM</li>
+              <li><strong>🕒 Hours:</strong> 8:00 AM – 6:00 PM</li>
               <li>
                 <strong>📧 Email:</strong>{' '}
                 <a href="mailto:hello@kinderhearts.my">hello@kinderhearts.my</a>
@@ -62,35 +62,6 @@ function ContactUs() {
               ></iframe>
             </div>
           </div>
-
-          {/* Right column */}
-          {/* <aside className="mission-panel">
-            <h2>More Than a Preschool</h2>
-            <p>
-              At KinderHearts, we believe that every child is unique, full of potential,
-              and deserving of a safe, loving space to learn and grow. Our mission is to
-              nurture young minds while shaping kind hearts — empowering children to explore,
-              discover, and build a lifelong love for learning.
-            </p>
-            <p>
-              From playful discovery to structured learning, we create an environment where
-              curiosity thrives, creativity blooms, and confidence blossoms.
-            </p>
-            <p>
-              KinderHearts is more than a preschool — it’s a place where children are inspired
-              to dream big, think deeply, and grow with confidence. Through a balanced blend of
-              academics, creativity, and character-building, we prepare young learners not just
-              for school, but for life.
-            </p>
-            <p>
-              Together, we cultivate curiosity, compassion, and a lifelong passion for learning.
-            </p>
-            <p>
-              At KinderHearts, we know that early education is about more than ABCs and 123s —
-              it’s about helping little hearts grow big. Our classrooms are full of laughter,
-              creativity, and curiosity, where every child is celebrated for who they are.
-            </p>
-          </aside> */}
         </div>
       </section>
 

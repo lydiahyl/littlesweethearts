@@ -162,8 +162,10 @@ export default function Curriculum() {
 
             <div className="focus-grid">
               <div className="focus-card">
-                <FaLanguage className="focus-icon" />
-                <h4>Language &amp; Communication</h4>
+                <div className="focus-row">
+                  <FaLanguage className="focus-icon" />
+                  <h4>Language &amp; Communication</h4>
+                </div>
                 <p>
                   We strengthen English, Bahasa Malaysia, and Mandarin through storytelling,
                   conversation, songs, imaginative play, and expressive activities that build both
@@ -172,8 +174,10 @@ export default function Curriculum() {
               </div>
 
               <div className="focus-card">
-                <FaCalculator className="focus-icon" />
-                <h4>Early Mathematics &amp; Thinking Skills</h4>
+                <div className="focus-row">
+                  <FaCalculator className="focus-icon" />
+                  <h4>Early Mathematics &amp; Thinking Skills</h4>
+                </div>
                 <p>
                   Mathematical thinking is nurtured through play and real-life experiences that
                   build early number sense, reasoning, and problem-solving abilities.
@@ -181,8 +185,10 @@ export default function Curriculum() {
               </div>
 
               <div className="focus-card">
-                <FaFlask className="focus-icon" />
-                <h4>Science &amp; Discovery</h4>
+                <div className="focus-row">
+                  <FaFlask className="focus-icon" />
+                  <h4>Science &amp; Discovery</h4>
+                </div>
                 <p>
                   Children explore the natural world through hands-on inquiry, nature walks,
                   observation, and experimentation.
@@ -190,8 +196,10 @@ export default function Curriculum() {
               </div>
 
               <div className="focus-card">
-                <FaPaintBrush className="focus-icon" />
-                <h4>Creative Arts</h4>
+                <div className="focus-row">
+                  <FaPaintBrush className="focus-icon" />
+                  <h4>Creative Arts</h4>
+                </div>
                 <p>
                   Imagination comes alive through music, movement, visual arts, and storytelling —
                   encouraging self-expression and creative thinking.
@@ -199,8 +207,10 @@ export default function Curriculum() {
               </div>
 
               <div className="focus-card">
-                <FaSmile className="focus-icon" />
-                <h4>Social &amp; Emotional Development</h4>
+                <div className="focus-row">
+                  <FaSmile className="focus-icon" />
+                  <h4>Social &amp; Emotional Development</h4>
+                </div>
                 <p>
                   We help children understand themselves and others, building emotional awareness,
                   empathy, friendships, and the foundations for healthy relationships and
@@ -209,8 +219,10 @@ export default function Curriculum() {
               </div>
 
               <div className="focus-card">
-                <FaRunning className="focus-icon" />
-                <h4>Physical Development</h4>
+                <div className="focus-row">
+                  <FaRunning className="focus-icon" />
+                  <h4>Physical Development</h4>
+                </div>
                 <p>
                   Through active play, outdoor exploration, and fine motor activities, children
                   strengthen their coordination, balance, and overall physical wellbeing.
@@ -218,8 +230,10 @@ export default function Curriculum() {
               </div>
 
               <div className="focus-card">
-                <FaHandsHelping className="focus-icon" />
-                <h4>Humanity &amp; Moral Values</h4>
+                <div className="focus-row">
+                  <FaHandsHelping className="focus-icon" />
+                  <h4>Humanity &amp; Moral Values</h4>
+                </div>
                 <p>
                   We nurture hearts by instilling universal values such as kindness, respect,
                   gratitude, and responsibility — guiding children to care for themselves, for

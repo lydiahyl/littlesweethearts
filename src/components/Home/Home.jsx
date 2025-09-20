@@ -126,8 +126,8 @@ function Home() {
             <img src={about_img} alt="about" className="about-img" />
           </div>
           <div className="about-right" data-aos="fade-left">
-            <h3>ABOUT KINDERHEARTS</h3>
-            <h2>Where Every Little Step Sparks Wonder</h2>
+            <h3 className="section-title about-kinderhearts" style={{textAlign: 'left'}} >About KinderHearts</h3>
+            <h2 className="section-subtitle" style={{textAlign: 'left'}} >Where Every Little Step Sparks Wonder</h2>
             <p>At KinderHearts, hearts come first. We believe that the true heart of education lies in
                the education of the heart, helping children grow into confident, compassionate, and
                lifelong learners.
@@ -155,7 +155,7 @@ function Home() {
       </section>
 
       <div className="programs-section" data-aos="fade-up">
-        <Title subTitle="KinderNews" />
+  <h3 className="section-title" style={{marginBottom: '30px'}}>KINDERNEWS</h3>
         <div className="programs">
           <div className="program" data-aos="zoom-in">
             <img src={program_1} alt="" />
@@ -185,7 +185,7 @@ function Home() {
 {/* === KinderSpaces Intro (before images) === */}
 <section className="kspace-intro" data-aos="fade-up">
   <div className="kspace-container">
-          <Title subTitle="KinderSpaces" />
+          <h3 className="section-title" style={{marginBottom: '30px'}}>KINDERSPACES</h3>
           <p>
       At KinderHearts, every corner is thoughtfully designed to inspire curiosity, creativity, and a
       lifelong love of learning. From classrooms equipped with 21st-century learning tools to playful

@@ -33,6 +33,24 @@
   padding: 56px 20px;
   background: #fff;
 }
+
+/* Standard section title and subtitle for Contact page */
+.section-title {
+  font-size: 26px;
+  color: #7C0A02;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto 18px;
+  letter-spacing: 0.01em;
+}
+.section-subtitle {
+  font-size: 20px;
+  color: #151E3F;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto 24px;
+  letter-spacing: 0.01em;
+}
 .contact-grid {
   max-width: 1200px;
   margin: 0 auto;
@@ -40,9 +58,13 @@
 }
 /* LEFT: Info + Map */
 .contact-heading {
-  color: var(--navy);
+  /* Use section-title styles for consistency */
   font-size: 26px;
-  margin-bottom: 8px;
+  color: #7C0A02;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto 18px;
+  letter-spacing: 0.01em;
 }
 .contact-intro {
   color: #444;

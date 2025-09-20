@@ -29,7 +29,7 @@ const Navbar = () => {
         <Link to="/contactus" onClick={() => setIsOpen(false)}><li><button className="btn">BOOK A KINDERTOUR</button></li></Link>
 
         <li className="nav-social">
-          <a href="https://facebook.com/kinderheartspreschools" target="_blank" rel="noreferrer">
+          <a href="https://facebook.com/kinderheartspreschool" target="_blank" rel="noreferrer">
             <img src={fbLogo} alt="Facebook" className="social-img" />
           </a>
           <a href="https://www.instagram.com/kinderhearts.official?igsh=MTR5Mm8yYXZyYXl5aQ==" target="_blank" rel="noreferrer">

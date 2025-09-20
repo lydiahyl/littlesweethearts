@@ -158,9 +158,6 @@ const AboutUs = () => {
             The Heart of Education is the Education of the Heart
           </p>
           <p className="body">
-            At KinderHearts, we believe the heart of education is the education
-            of the heart.
-            <br /><br />
             Early childhood is the most critical period for nurturing minds,
             shaping values, and building the foundation for lifelong learning.
             Our preschool is a safe, joyful, and inspiring place where every
@@ -180,7 +177,7 @@ const AboutUs = () => {
       <section className="vm-section" data-aos="fade-up">
         <div className="vm-grid container">
           <div className="card" data-aos="fade-right">
-            <h3>Our Vision</h3>
+            <h2>Our Vision</h2>
             <p>
               To be a nurturing preschool where every little heart grows with
               joy, wonder, and purpose — becoming kind, confident, and curious
@@ -188,7 +185,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="card" data-aos="fade-left">
-            <h3>Our Mission</h3>
+            <h2>Our Mission</h2>
             <p>
               At KinderHearts, our mission is to create a safe and happy
               environment that fosters holistic growth—physical, emotional,

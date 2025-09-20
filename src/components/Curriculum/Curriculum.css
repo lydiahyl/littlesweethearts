@@ -63,7 +63,7 @@
 
 /* SECTION base */
 .section {
-  padding: 56px 20px;
+  padding: 56px 20px 56px 20px;
 }
 .section .container {
   text-align: center;
@@ -76,16 +76,17 @@
 }
 
 .section-title {
-  font-size: 28px;
+  font-size: 26px;
   color: var(--red);
   margin-bottom: 12px;
   font-weight: 700;
 }
 .section-tag {
-  font-size: 16px;
+  font-size: 22px;
   color: var(--navy);
-  margin: 4px 0 12px;
-  font-weight: 700;
+  margin: 8px 0 18px;
+  font-weight: bold;
+  letter-spacing: 0.01em;
 }
 .section-subtitle {
   margin-top: 18px;
@@ -107,7 +108,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
-  margin-top: 16px;
+  margin-top: 24px;
+  margin-bottom: 10px;
 }
 .card {
   background: #fff;
@@ -157,6 +159,7 @@
   padding: 20px;
   text-align: left;
   box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  display: block;
 }
 
 /* ✅ Center the last card if odd number */
@@ -168,13 +171,34 @@
 .focus-icon {
   font-size: 26px;
   color: var(--red);
-  margin-bottom: 8px;
-  display: block;
+  margin-bottom: 0;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
 }
 .focus-card h4 {
-  font-size: 17px;
+  font-size: 18px;
   color: var(--navy);
-  margin: 0 0 6px;
+  margin: 0 0 6px 0;
+  font-weight: 700;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+/* Flex row for icon and title in focus cards */
+.focus-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  justify-content: flex-start;
+}
+.focus-row h4 {
+  position: relative;
+  top: 2px;
+  left: 2px;
+  text-align: left;
 }
 .focus-card p {
   font-size: 14.5px;

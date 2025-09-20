@@ -1,3 +1,24 @@
+.section-title.about-kinderhearts {
+  color: #7C0A02 !important;
+  font-size: 26px !important;
+}
+/* Section titles and subtitles for Home (match AboutUs) */
+.section-title {
+  font-size: 26px;
+  color: #7C0A02;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto 18px;
+  letter-spacing: 0.01em;
+}
+.section-subtitle {
+  font-size: 20px;
+  color: #151E3F;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto 24px;
+  letter-spacing: 0.01em;
+}
 /* ========== ABOUT ========== */
 .about-section {
   background-color: #fdf9f6;
