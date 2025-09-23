@@ -65,6 +65,24 @@ function Home() {
         "Our classrooms are warm, bright, and thoughtfully designed to create a conducive environment where every child feels safe, engaged, and inspired. With a low teacher-to-student ratio, each child receives the attention and guidance they deserve. Here, every voice matters, every question is valued, every mistake teaches, and every child is seen, giving them the confidence to explore, discover, and grow, both independently and collaboratively. To prepare our little learners for the 21st century, we thoughtfully integrate smart technology like interactive smartboards and hands-on digital tools. Lessons are designed to spark curiosity, encourage creativity, and nurture essential skills such as problem-solving, collaboration, and communication, all while keeping screen time balanced and intentional to protect young minds and prioritise meaningful, hands-on learning."
     },
     {
+      title: 'Playground',
+      img: facility_3,
+      desc:
+        'Welcome to our Kinder Kingdom of Kindness — a safe and magical space where every child is valued, included, and celebrated. Designed in collaboration with playground specialists, our castle-inspired playground nurtures courage, empathy, resilience, and boundless imagination. Through shared adventures, children learn to take turns, work together, and develop lasting social skills, all while building strength, balance, and coordination through active play. Every detail is thoughtfully designed to spark joy, laughter, and meaningful friendships.'
+    },
+    {
+      title: 'Library',
+      img: facility_2,
+      desc:
+        "Today a reader, tomorrow a leader. At the heart of our library stands the enchanting Tree of Knowledge, custom-designed in collaboration with school furniture specialists to symbolise growth, wisdom, and endless dreams. Beneath its gentle canopy, little learners find cozy corners to curl up with their favourite stories, reflect quietly, sparking imagination, expanding horizons, and cultivating a lifelong love for reading. "
+    },
+    {
+      title: 'Science Garden',
+      img: facility_4,
+      desc:
+        'Step into our Science Garden, where curiosity blossoms and little explorers uncover the wonders of nature. Designed in collaboration with experienced landscapers, this magical space seamlessly brings nature and learning together. Here, children watch plants grow, meet tiny creatures, and see classroom science come alive. Through hands-on discovery, they develop a lifelong love for nature and a deep sense of environmental awareness and responsibility.'
+    },
+    {
       title: 'Cafeteria',
       img: facility_5,
       desc:
