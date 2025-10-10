@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./AboutUs.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import principal from "../../assets/founder.jpg";
-import teacher1 from "../../assets/teacher1.png";
-import teacher2 from "../../assets/teacher2.png";
+import principal from "../../assets/eunice.jpg";
+import teacher1 from "../../assets/ping.jpg";
+import teacher2 from "../../assets/enci.jpg";
 import Footer from "../Footer/Footer";
 
 const AboutUs = () => {
