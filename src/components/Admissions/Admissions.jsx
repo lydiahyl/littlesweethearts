@@ -1,6 +1,7 @@
 import React from "react";
-import "./Admissions.css";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import "./Admissions.css";
 import Footer from "../Footer/Footer";
 
 const fadeUp = {
@@ -86,9 +87,9 @@ export default function Admissions() {
               </thead>
               <tbody>
                 <tr><td>Playgroup</td><td>3</td><td>5 children</td></tr>
-                <tr><td>Nursery</td><td>4</td><td>8–10 children</td></tr>
-                <tr><td>Kindergarten 1</td><td>5</td><td>10–15 children</td></tr>
-                <tr><td>Kindergarten 2</td><td>6</td><td>15 children</td></tr>
+                <tr><td>Nursery</td><td>4</td><td>10-12 children</td></tr>
+                <tr><td>Kindergarten 1</td><td>5</td><td>12–15 children</td></tr>
+                <tr><td>Kindergarten 2</td><td>6</td><td>12-15 children</td></tr>
               </tbody>
             </table>
           </div>

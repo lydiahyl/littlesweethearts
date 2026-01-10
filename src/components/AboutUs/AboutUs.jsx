@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import "./AboutUs.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -8,7 +8,6 @@ import teacher2 from "../../assets/enci.jpg";
 import Footer from "../Footer/Footer";
 
 const AboutUs = () => {
-  const [showMore, setShowMore] = useState(false);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });

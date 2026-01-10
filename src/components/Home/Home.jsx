@@ -16,14 +16,14 @@ import program_icon_1 from '../../assets/childrenicon2.png';
 import program_icon_2 from '../../assets/christmasicon2.png';
 import program_icon_3 from '../../assets/holidayicon.png';
 
-import facility_1 from '../../assets/comingsoon.png';
-import facility_2 from '../../assets/comingsoon.png';
-import facility_3 from '../../assets/comingsoon.png';
-import facility_4 from '../../assets/comingsoon.png';
+import facility_1 from '../../assets/classroom.JPG';
+import facility_2 from '../../assets/library-3.JPG';
+import facility_3 from '../../assets/playground-3.JPG';
+import facility_4 from '../../assets/science-garden.JPG';
 import facility_5 from '../../assets/comingsoon.png';
-import facility_6 from '../../assets/comingsoon.png';
-import facility_7 from '../../assets/comingsoon.png';
-import facility_8 from '../../assets/comingsoon.png';
+import facility_6 from '../../assets/music-corner.JPG';
+import facility_7 from '../../assets/art-messy-corner.jpg';
+import facility_8 from '../../assets/pretend-play.jpg';
 import facility_9 from '../../assets/comingsoon.png';
 
 
