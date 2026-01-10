@@ -1,4 +1,3 @@
-
 .slider-container {
   width: 100%;
   height: 75vh;
@@ -20,6 +19,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 46%; /* Show both sign and stage */
+  transform: scale(1.0); /* No zoom by default, adjust if needed */
+  transition: transform 0.3s ease;
 }
 
 /* FIXED: was .slider-image::before */
@@ -55,6 +57,7 @@
   font-weight: 600;
   line-height: 1.2;
   margin: 0;
+
 }
 
 .hero-swiper .overlay .slide-content .hero-subtitle {

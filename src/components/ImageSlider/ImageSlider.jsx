@@ -1,7 +1,10 @@
 import React, {useState} from 'react'
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'framer-motion'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Autoplay, Pagination } from "swiper"
-import { motion } from 'framer-motion'
+// eslint-disable-next-line react-hooks/rules-of-hooks
+SwiperCore.use([Autoplay, Pagination])
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -10,8 +13,6 @@ import './ImageSlider.css'
 import image1 from '../../assets/Banner_1.png'
 import image2 from '../../assets/Banner_2.png'
 import image3 from '../../assets/Banner_3.png'
-
-SwiperCore.use([Autoplay, Pagination])
 
 const slides = [
   {

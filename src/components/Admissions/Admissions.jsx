@@ -86,10 +86,10 @@ export default function Admissions() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Playgroup</td><td>3</td><td>5 children</td></tr>
-                <tr><td>Nursery</td><td>4</td><td>10-12 children</td></tr>
-                <tr><td>Kindergarten 1</td><td>5</td><td>12–15 children</td></tr>
-                <tr><td>Kindergarten 2</td><td>6</td><td>12-15 children</td></tr>
+                <tr><td>Playgroup</td><td>3</td><td>1:5 children</td></tr>
+                <tr><td>Nursery</td><td>4</td><td>1:10-12 children</td></tr>
+                <tr><td>Kindergarten 1</td><td>5</td><td>1:12–15 children</td></tr>
+                <tr><td>Kindergarten 2</td><td>6</td><td>1:12-15 children</td></tr>
               </tbody>
             </table>
           </div>
