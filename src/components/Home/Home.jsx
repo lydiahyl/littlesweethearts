@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './Home.css';
-import about_img from '../../assets/about_kinderhearts.jpg';
+import about_img from '../../assets/aboutkinder.png';
 import { Link } from 'react-router-dom';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
